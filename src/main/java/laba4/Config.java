@@ -9,7 +9,11 @@ import java.io.IOException;
 import javax.swing.JFileChooser;
 
 public class Config {
-	public void loadConf() {
+	public boolean l = true;
+	
+	public void loadNewConf() throws IOException {
+		float f;
+		String coef = null;
 		String inf = "";
         JFileChooser fileopen = new JFileChooser();
         int ret = fileopen.showDialog(null, "Открыть файл");
@@ -24,32 +28,114 @@ public class Config {
                 e1.printStackTrace();
             }
             String line;
-            try {
-                while((line = br.readLine()) != null){
-                    inf = inf + line + "\n";
-                }
-            } catch (IOException e1) {
-                e1.printStackTrace();
-            }
-            try {
-                br.close();
-                fr.close();
-            } catch (IOException e1) {
-                e1.printStackTrace();
-            }
-            /*try(FileReader reader = new FileReader("notes3.txt"))
-            {
-               // читаем посимвольно
-                int c;
-                while((c=reader.read())!=-1){
-                     
-                    System.out.print((char)c);
-                } 
-            }
-            catch(IOException ex){
-                 
-                System.out.println(ex.getMessage());
-            }   */
+            for (int i = 0; i < 11; i++) {
+    			for (int j = 0; j < 2; j++) {
+    				line = br.readLine();
+    				coef = coef + line + "\n";
+    				int end = line.indexOf(' '); // ищем индекс первого пробела
+    				if (end == -1) {
+    					inf = line.substring(0);
+    				} else {
+    					inf = line.substring(0, end);
+    				}
+    				f = Integer.parseInt(inf);
+    				if (f < 0) {
+    					l = false;
+    					break;
+    				}
+    			}
+    		}
+    		line = br.readLine();
+    		coef = coef + line + "\n";
+    		for (int i = 0; i < 5; i++) {
+    			int end = line.indexOf(' '); // ищем индекс первого пробела
+    			if (end == -1) {
+    				inf = line.substring(0);
+    			} else {
+    				inf = line.substring(0, end);
+    			}
+    			f = (float) Integer.parseInt(inf);
+				if (f < 0) {
+					l = false;
+					break;
+				}
+    		}
+    		line = br.readLine();
+			coef = coef + line + "\n";
+    		for (int i = 0; i < 15; i++) {
+    			int end = line.indexOf(' '); // ищем индекс первого пробела
+    			if (end == -1) {
+    				inf = line.substring(0);
+    			} else {
+    				inf = line.substring(0, end);
+    			}
+    			f = (float) Integer.parseInt(inf);
+				if (f < 0) {
+					l = false;
+					break;
+				}
+    		}
+    		for (int i = 0; i < 7; i++) {
+    			for (int j = 0; j < 8; j++) {
+    				line = br.readLine();
+    				coef = coef + line + "\n";
+    				int end = line.indexOf(' '); // ищем индекс первого пробелаt
+    				if (end == -1) {
+    					inf = line.substring(0);
+    				} else {
+    					inf = line.substring(0, end);
+    				}
+    				f = (float) Integer.parseInt(inf);
+    				if (f < 0) {
+    					l = false;
+    					break;
+    				}
+    			}
+    		}
+    		line = br.readLine();
+			coef = coef + line + "\n";
+    		for (int i = 0; i < 6; i++) {
+    			int end = line.indexOf(' '); // ищем индекс первого пробела
+    			if (end == -1) {
+    				inf = line.substring(0);
+    			} else {
+    				inf = line.substring(0, end);
+    			}
+    			f = (float) Integer.parseInt(inf);
+				if (f < 0) {
+					l = false;
+					break;
+				}
+    		}
+    		line = br.readLine();
+			coef = coef + line + "\n";
+    		for (int i = 0; i < 12; i++) {
+    			int end = line.indexOf(' '); // ищем индекс первого пробела
+    			if (end == -1) {
+    				inf = line.substring(0);
+    			} else {
+    				inf = line.substring(0, end);
+    			}
+    			f = (float) Integer.parseInt(inf);
+				if (f < 0) {
+					l = false;
+					break;
+				}
+    		}
+    		line = br.readLine();
+			coef = coef + line + "\n";
+			f = (float) Integer.parseInt(inf);
+			if (f < 0) {
+				l = false;
+			}
+    		line = br.readLine();
+			coef = coef + line + "\n";
+			f = (float) Integer.parseInt(inf);
+			if (f < 0) {
+				l = false;
+			}
+    		br.close();
+    		fr.close();
         }
 	}
 }

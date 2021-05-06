@@ -51,7 +51,7 @@ public class MainWindow extends HttpServlet {
 			request.getParameter("promo"));
 			}
 				
-		public void setAsRequestAttributesAndCalculate(HttpServletRequest request) {
+		public void setAsRequestAttributesAndCalculate(HttpServletRequest request) throws IOException {
 			request.setAttribute("category", category);
 			request.setAttribute("city", city);
 			request.setAttribute("cbm", cbm);
@@ -81,9 +81,13 @@ public class MainWindow extends HttpServlet {
 			
 			if (pricep_try == 1) {
 				//переход на метод или класс с прицепом
+				OSAGOwithTrailer osago = new OSAGOwithTrailer();
+				osago.calculation(category_try, city_try, cbm_try, age_try, experience_try, cm_try, pricep_try, promo_try);
 				
 			} else if (pricep_try == -1) {
 				//переход на метод или класс с промокодом
+				OSAGOwithPromo osago = new OSAGOwithPromo();
+				osago.calculation(category_try, city_try, cbm_try, age_try, experience_try, cm_try, pricep_try, promo_try);
 				
 			}
 			/*if (first_try <= 0 || second_try <= 0) {

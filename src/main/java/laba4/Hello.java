@@ -1,6 +1,6 @@
 package laba4;
 
-public class Calculation {
+public class Hello {
 public int BTmin = 1;
 public int BTmax = 1;
 public float KT = 1;
