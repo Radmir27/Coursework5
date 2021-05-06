@@ -1,26 +1,37 @@
 package laba4;
 
-public abstract class OSAGO {
-	public int btMin = 0;
-	public int btMax = 0;
-	public float ct = 0;
-	public float cbm = 0;
-	public float csv = 0;
-	public float cm = 0;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
+public abstract class OSAGO {	//возможно не абстрактный
+	//public int btMin = 0;
+	//public int btMax = 0;
+	//public float ct = 0;
+	//public float cbm = 0;
+	//public float csv = 0;
+	//public float cm = 0;
 	
-	public int category = 0;
-	public int city = 0;
-	public int сbmInd = 0;
-	public int age = 0;
-	public int experience = 0;
-	public int cmInd = 0;
+	//public int category = 0;
+	//public int city = 0;
+	//public int сbmInd = 0;
+	//public int age = 0;
+	//public int experience = 0;
+	//public int cmInd = 0;
 	
-	public int totalMin = 0;
-	public int totalMax = 0;
+	public int[][] btCoef;		// расчитывается от категории
+	public float[] cityCoef;	// расчитывается от города
+	public float[] cbmCoef;		// расчитывается от кбм
+	public float[][] csvsCoef;	// расчитывается от возраста и опыта
+	public float[] cmCoef;		// расчитывается от CM
 	
-	abstract public void peredacha();
+	//public int totalMin;	// возможно будет не здесь
+	//public int totalMax;	// возможно будет не здесь
 	
-	public void setCategory(int category) {
+	//abstract public void peredacha();	//??
+	
+	/*public void setCategory(int category) {
 		this.category = category;
 	}
 	
@@ -50,9 +61,9 @@ public abstract class OSAGO {
 
 	public int getTotalMax() {
 		return totalMax;
-	}
+	}*/
 	
-	public void getBTmin() {
+	/*public void getBTmin() {
 		switch (category) {
 		case 0 :
 			btMin = 625;
@@ -103,9 +114,9 @@ public abstract class OSAGO {
 			btMax = 1952;
 			break;
 		}
-	}
+	}*/
 	
-	public void getCT() {
+	/*public void getCT() {
 		switch (city) {
 		case 0 :
 			ct = (float) 1.72;
@@ -123,9 +134,9 @@ public abstract class OSAGO {
 			ct = (float) 1.9;
 			break;
 		}
-	}
+	}*/
 	
-	public void getCBM() {
+	/*public void getCBM() {
 		switch (сbmInd) {
 		case 0 :
 			cbm = (float) 2.45;
@@ -173,9 +184,9 @@ public abstract class OSAGO {
 			cbm = (float) 0.5;
 			break;
 		}
-	}
+	}*/
 	
-	public float[][] csvs = {
+	/*csvs = {
 			{(float) 1.93,(float) 1.90,(float) 1.87,(float) 1.66,(float) 1.64,(float) 1.64,(float) 1.64,(float) 1.64},
 			{(float) 1.79,(float) 1.77,(float) 1.76,(float) 1.08,(float) 1.06,(float) 1.06,(float) 1.06,(float) 1.06},
 			{(float) 1.77,(float) 1.68,(float) 1.61,(float) 1.06,(float) 1.05,(float) 1.05,(float) 1.01,(float) 1.01},
@@ -183,16 +194,81 @@ public abstract class OSAGO {
 			{(float) 1.61,(float) 1.59,(float) 1.58,(float) 0.99,(float) 0.96,(float) 0.95,(float) 0.95,(float) 0.94},
 			{(float) 1.59,(float) 1.58,(float) 1.57,(float) 0.95,(float) 0.95,(float) 0.94,(float) 0.94,(float) 0.94},
 			{(float) 1.58,(float) 1.57,(float) 1.56,(float) 0.94,(float) 0.94,(float) 0.94,(float) 0.94,(float) 0.93},
-			{(float) 1.55,(float) 1.54,(float) 1.53,(float) 0.92,(float) 0.91,(float) 0.91,(float) 0.91,(float) 0.9}
-			}; 
+			{(float) 1.55,(float) 1.54,(float) 1.53,(float) 0.92,(float) 0.91,(float) 0.91,(float) 0.91,(float) 0.90}
+			}; */
 	
-	public void getCSV() {
+	/*public void getCSV() {
 		csv = csvs[age][experience];
-	}
+	}*/
 	
-	public float[] cms = {(float) 0.6,1,(float) 1.1,(float) 1.2,(float) 1.4,(float) 1.6};
+	//public float[] cms = {(float) 0.6,1,(float) 1.1,(float) 1.2,(float) 1.4,(float) 1.6};
 	
-	public void getCM() {
+	/*public void getCM() {
 		cm = cms[cmInd];
+	}*/
+	
+	public void setConf() throws IOException {
+		File file = new File("config.txt");
+        //создаем объект FileReader для объекта File
+        FileReader fr = new FileReader(file);
+        //создаем BufferedReader с существующего FileReader для построчного считывания
+        BufferedReader reader = new BufferedReader(fr);
+        // считаем сначала первую строку
+        String line;
+        String inf;
+		for (int i = 0; i < 11; i++) {
+			for (int j = 0; j < 2; j++) {
+				line = reader.readLine();
+				int end = line.indexOf(' '); // ищем индекс первого пробела
+				if (end == -1) {
+					inf = line.substring(0);
+				} else {
+					inf = line.substring(0, end);
+				}
+				btCoef[i][j] = Integer.parseInt(inf);
+			}
+		}
+		line = reader.readLine();
+		for (int i = 0; i < 5; i++) {
+			int end = line.indexOf(' '); // ищем индекс первого пробела
+			if (end == -1) {
+				inf = line.substring(0);
+			} else {
+				inf = line.substring(0, end);
+			}
+			cityCoef[i] = (float) Integer.parseInt(inf);
+		}
+		line = reader.readLine();
+		for (int i = 0; i < 15; i++) {
+			int end = line.indexOf(' '); // ищем индекс первого пробела
+			if (end == -1) {
+				inf = line.substring(0);
+			} else {
+				inf = line.substring(0, end);
+			}
+			cbmCoef[i] = (float) Integer.parseInt(inf);
+		}
+		for (int i = 0; i < 7; i++) {
+			for (int j = 0; j < 8; j++) {
+				line = reader.readLine();
+				int end = line.indexOf(' '); // ищем индекс первого пробелаt
+				if (end == -1) {
+					inf = line.substring(0);
+				} else {
+					inf = line.substring(0, end);
+				}
+				csvsCoef[i][j] = (float) Integer.parseInt(inf);
+			}
+		}
+		line = reader.readLine();
+		for (int i = 0; i < 6; i++) {
+			int end = line.indexOf(' '); // ищем индекс первого пробела
+			if (end == -1) {
+				inf = line.substring(0);
+			} else {
+				inf = line.substring(0, end);
+			}
+			cmCoef[i] = (float) Integer.parseInt(inf);
+		}
 	}
 }

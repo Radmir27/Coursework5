@@ -14,25 +14,10 @@ public class MainWindow extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestCalc Calc = RequestCalc.fromRequestParameters(request);
 		Calc.setAsRequestAttributesAndCalculate(request);
-		 
-		request.getRequestDispatcher("/Results.jsp").forward(request, response);
-		/*osago.setCategory(category.getSelectedIndex());
-                	osago.setCity(city.getSelectedIndex());
-                	osago.setCBM(kbm.getSelectedIndex());
-                	osago.setAge(age.getSelectedIndex());
-                	osago.setExperience(experience.getSelectedIndex());
-                	osago.setCM(power.getSelectedIndex());
-                	osago.peredacha();
-                	totalMin.setText(String.valueOf(osago.getTotalMin()));
-                	totalMax.setText(String.valueOf(osago.getTotalMax()));*/
 	}
 	
 	private static class RequestCalc {
-		//private final String first_calc;
-		//private final String second_calc;
-		private float result;
-		
-		private final int category;
+		private final String category;
 		private final String city;
 		private final String cbm;
 		private final String age;
@@ -40,9 +25,11 @@ public class MainWindow extends HttpServlet {
 		private final String cm;
 		private final String pricep;
 		private final String promo;
+		
+		private float result;
 						
 		private RequestCalc (String category, String city, String cbm, String age, String experience, String cm, String pricep,String promo) {
-			this.category = category.getSelectedIndex();
+			this.category = category;
 			this.city = city;
 			this.cbm = cbm;
 			this.age = age;
@@ -73,16 +60,32 @@ public class MainWindow extends HttpServlet {
 			request.setAttribute("cm", cm);
 			request.setAttribute("pricep", pricep);
 			request.setAttribute("promo", promo);
-			//float first_try;
-			//float second_try;
-			/*try { 
-			first_try=Float.parseFloat(first_calc);
-			second_try=Float.parseFloat(second_calc);
+			
+			int category_try;
+			int city_try;
+			int cbm_try;
+			int age_try;
+			int experience_try;
+			int cm_try;
+			int pricep_try;
+			String promo_try;
+			
+			category_try = Integer.parseInt(category);
+			city_try = Integer.parseInt(city);
+			cbm_try = Integer.parseInt(cbm);
+			age_try = Integer.parseInt(age);
+			experience_try = Integer.parseInt(experience);
+			cm_try = Integer.parseInt(cm);
+			pricep_try = Integer.parseInt(pricep);
+			promo_try = promo;
+			
+			if (pricep_try == 1) {
+				//переход на метод или класс с прицепом
+				
+			} else if (pricep_try == -1) {
+				//переход на метод или класс с промокодом
+				
 			}
-			catch (NumberFormatException e) {
-				first_try=0;
-				second_try=0;	
-			}*/
 			/*if (first_try <= 0 || second_try <= 0) {
 				first_try = 0;
 				second_try = 0;
