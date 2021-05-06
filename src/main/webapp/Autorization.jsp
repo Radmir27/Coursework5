@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Калькулятор - площадь равнобедреннего треугольника</title>
+<title>Калькулятор расчета стоимости ОСАГО</title>
 </head>
 <body bgcolor="#DAD8FE" leftmargin="40">
 <h1>Окно авторизации</h1>
