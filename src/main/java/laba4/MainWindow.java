@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name="Calc", urlPatterns="/JavaCalc") //связывание сервлета с URL
+@WebServlet(name="Calc", urlPatterns="/JavaCalc")
 public class MainWindow extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -32,7 +32,7 @@ public class MainWindow extends HttpServlet {
 		//private final String second_calc;
 		private float result;
 		
-		private final String category;
+		private final int category;
 		private final String city;
 		private final String cbm;
 		private final String age;
@@ -42,7 +42,7 @@ public class MainWindow extends HttpServlet {
 		private final String promo;
 						
 		private RequestCalc (String category, String city, String cbm, String age, String experience, String cm, String pricep,String promo) {
-			this.category = category;
+			this.category = category.getSelectedIndex();
 			this.city = city;
 			this.cbm = cbm;
 			this.age = age;
