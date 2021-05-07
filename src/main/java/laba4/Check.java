@@ -4,17 +4,19 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Check {
 
-    private String[] logins;
-    private String[] passwords;
+	private List<String> logins = new ArrayList<>();
+    private List<String> passwords = new ArrayList<>();
 
     public boolean check(String login, String password) throws IOException {
-        boolean lp = false;
+    	boolean lp = false;
         setLogPass();
-        for (int i = 0; i < logins.length; i++) {
-            if (login == logins[i] && password == passwords[i] && login != null && password != null && login != "" && password != "") {
+        for (int i = 0; i < logins.size(); i++) {
+            if (login.equals(logins.get(i)) && password.equals(passwords.get(i)) && !login.equals(null) && !login.equals(null)) {
                 lp = true;
                 break;
             }
@@ -23,21 +25,20 @@ public class Check {
     }
 
     private void setLogPass() throws IOException {
-        logins = new String[5];
-        passwords = new String[logins.length];
-        File file = new File("LogPass.txt");
+    	File file = new File("LogPass.txt");
         //создаем объект FileReader для объекта File
         FileReader fr = new FileReader(file);
         //создаем BufferedReader с существующего FileReader для построчного считывания
         BufferedReader reader = new BufferedReader(fr);
         // считаем сначала первую строку
         String line;
-        for (int i = 0; i < logins.length; i++) {
-            line = reader.readLine();
+        while((line = reader.readLine()) != null) {
+        	System.out.println("��� " + line);
             int end = line.indexOf(' '); // ищем индекс первого пробела
-            logins[i] = line.substring(0, end);
+            logins.add(line.substring(0, end));
             line = line.substring(end+1);
-            passwords[i] = line.substring(0);
+            passwords.add(line.substring(0));
         }
+        reader.close();
     }
 }
