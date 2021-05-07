@@ -46,13 +46,13 @@
                   </ul>
                 </nav>
               </div>
- 			 <form enctype="multipart/form-data" method="post">
-					<p>Загрузите ваши настройки на сервер</p>
-   					<p><input type="file" name="pdf" requered accept="*.pdf/*.txt">
+ 			 <form action="UploadDownloadFileConfServlet" enctype="multipart/form-data" method="post">
+					<p>Загрузить новые коэффициенты на сервер</p>
+   					<p><input type="file" name="config" requered accept="*.pdf/*.txt">
   				<input type="submit" value="Отправить"></p>
 	</form>
-			<form enctype="multipart/form-data" method="post">
-   					<p>Загрузите файл с новым списком администраторов</p>
+			<form action="UploadDownloadFileAdminServlet" enctype="multipart/form-data" method="post">
+   					<p>Загрузить новые логины с паролем для входа администратором</p>
    					<p><input type="file" name="arch" requered accept="*.pdf/*.txt">
 				<input type="submit" value="Отправить"></p>
   </form>
