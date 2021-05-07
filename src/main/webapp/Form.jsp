@@ -177,7 +177,7 @@
 				<input readonly type="text" name="price" id="price" value="${result}">
 			</div>
 			<div class="item">
-            	<input type="button" name="sign" value="Расчитать">
+            	<input type="submit" name="sign" value="Расчитать">
             </div>
            </form>
        </div>
