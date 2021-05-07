@@ -70,7 +70,7 @@
                   <ul>
                     <li><a href="/Authorization.jsp">Вход</a></li>
                     <li><a href="/authors.jsp">О нас</a></li>
-                    <li><a href="xxx.pdf" download>Выгрузить PDF</a></li>
+                    <li><a href="files/PDF.pdf" download>Выгрузить PDF</a></li>
                   </ul>
                 </nav>
               </div>
