@@ -32,11 +32,11 @@
     <form action="/JavaLogin" method="post">
         <div class="item">
             <label for="login">Логин:</label>
-            <input type="text" name="login" id="login" value="">
+            <input type="text" name="login" id="login" value="${login}">
         </div>
         <div class="item">
             <label for="pass">Пароль: </label>
-            <input type="password" name="pass" id="pass" value="">
+            <input type="password" name="pass" id="pass" value="${pass}">
         </div>
         <div class="item">
             <input type="submit" name="sign" value="Вход">
