@@ -11,6 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name="Calc", urlPatterns="/JavaCalc")
 public class MainWindow extends HttpServlet {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestCalc Calc = RequestCalc.fromRequestParameters(request);
 		Calc.setAsRequestAttributesAndCalculate(request);
@@ -26,7 +31,7 @@ public class MainWindow extends HttpServlet {
 		private final String pricep;
 		private final String promo;
 		
-		private float result;
+		//private float result;
 						
 		private RequestCalc (String category, String city, String cbm, String age, String experience, String cm, String pricep,String promo) {
 			this.category = category;

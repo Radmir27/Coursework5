@@ -14,8 +14,6 @@ public abstract class OSAGO {
 	protected float promo;
 	protected float staf;
 	
-	protected float tb;
-	
 	public void setConf(int category_try, int city_try, int cbm_try, int age_try, int experience_try, int cm_try,
 			int pricep_try) throws IOException {
 		Coef coef = new Coef();

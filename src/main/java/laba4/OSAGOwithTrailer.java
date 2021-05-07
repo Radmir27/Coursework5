@@ -8,7 +8,8 @@ public class OSAGOwithTrailer extends OSAGO {
 			int pricep_try, String promo_try) throws IOException {
 		setConf(category_try, city_try, cbm_try, age_try, experience_try, cm_try, pricep_try);
 		promo = 1;
-		tb = ((btMax - btMin)*staf+btMin)*ct*cbm*csv*cm*cpr*promo;
+		float tb = ((btMax - btMin)*staf+btMin)*ct*cbm*csv*cm*cpr*promo;
+		return tb;
 	}
 
 }
