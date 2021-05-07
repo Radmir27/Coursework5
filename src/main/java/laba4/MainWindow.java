@@ -16,9 +16,9 @@ public class MainWindow extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	protected void doClick(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestCalc Calc = RequestCalc.fromRequestParameters(request);
-		Calc.setAsRequestAttributesAndCalculate(request);
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		RequestCalc Calc = RequestCalc.fromRequestParameters(req);
+		Calc.setAsRequestAttributesAndCalculate(req);
 	}
 	
 	private static class RequestCalc {
