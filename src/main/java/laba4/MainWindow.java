@@ -11,14 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name="Calc", urlPatterns="/JavaCalc")
 public class MainWindow extends HttpServlet {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestCalc Calc = RequestCalc.fromRequestParameters(request);
 		Calc.setAsRequestAttributesAndCalculate(request);
+		
+		request.getRequestDispatcher("/Form.jsp").forward(request, response);
 	}
 	
 	private static class RequestCalc {
@@ -31,7 +28,7 @@ public class MainWindow extends HttpServlet {
 		private final String pricep;
 		private final String promo;
 		
-		//private float result;
+		private float result;
 						
 		private RequestCalc (String category, String city, String cbm, String age, String experience, String cm, String pricep,String promo) {
 			this.category = category;
@@ -87,13 +84,11 @@ public class MainWindow extends HttpServlet {
 			if (pricep_try == 1) {
 				//переход на метод или класс с прицепом
 				OSAGOwithTrailer osago = new OSAGOwithTrailer();
-				float result;
 				result = osago.calculation(category_try, city_try, cbm_try, age_try, experience_try, cm_try, promo_try);
 				request.setAttribute("result", result);
 			} else if (pricep_try == -1) {
 				//переход на метод или класс с промокодом
 				OSAGOwithPromo osago = new OSAGOwithPromo();
-				float result;
 				result = osago.calculation(category_try, city_try, cbm_try, age_try, experience_try, cm_try, promo_try);
 				request.setAttribute("result", result);
 			}

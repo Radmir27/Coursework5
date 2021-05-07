@@ -78,7 +78,7 @@
             </header>
            <div class="title"><h1>Калькулятор расчета ОСАГО</h1></div>
            <div class="form">
-           <form action="/JavaCalc" method="get">
+           <form action="/JavaCalc" method="post">
 			<div class="item">
     			<label for="category">Категория:</label>
     			<select id="category" name="category">
