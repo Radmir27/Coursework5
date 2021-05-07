@@ -11,11 +11,14 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name="Calc", urlPatterns="/JavaCalc")
 public class MainWindow extends HttpServlet {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestCalc Calc = RequestCalc.fromRequestParameters(request);
 		Calc.setAsRequestAttributesAndCalculate(request);
-		
-		request.getRequestDispatcher("/Form.jsp").forward(request, response);
 	}
 	
 	private static class RequestCalc {
