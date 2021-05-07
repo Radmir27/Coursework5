@@ -59,7 +59,6 @@ public class MainWindow extends HttpServlet {
 			}
 				
 		public void setAsRequestAttributesAndCalculate(HttpServletRequest request) throws IOException {
-			
 			int category_try;
 			int city_try;
 			int cbm_try;
