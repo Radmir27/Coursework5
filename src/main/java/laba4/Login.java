@@ -21,7 +21,7 @@ public class Login extends HttpServlet {
         boolean prov = auth.Proverka(request);
 
         if (prov) {
-            request.getRequestDispatcher("/AdminWindow.jsp").forward(request, response);
+            request.getRequestDispatcher("/admpanel.jsp").forward(request, response);
         } else {
             request.getRequestDispatcher("/Authorization.jsp").forward(request, response);
         }
