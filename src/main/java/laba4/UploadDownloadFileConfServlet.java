@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.PrintWriter;
 import java.util.Iterator;
 import java.util.List;
  
@@ -64,33 +63,17 @@ public class UploadDownloadFileConfServlet extends HttpServlet {
         if(!ServletFileUpload.isMultipartContent(request)){
             throw new ServletException("Content type is not multipart/form-data");
         }
- 
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-        out.write("<html><head></head><body>");
         try {
             List<FileItem> fileItemsList = uploader.parseRequest(request);
             Iterator<FileItem> fileItemsIterator = fileItemsList.iterator();
             while(fileItemsIterator.hasNext()){
                 FileItem fileItem = fileItemsIterator.next();
-                System.out.println("FieldName="+fileItem.getFieldName());
-                System.out.println("FileName="+fileItem.getName());
-                System.out.println("ContentType="+fileItem.getContentType());
-                System.out.println("Size in bytes="+fileItem.getSize());
- 
                 File file = new File(request.getServletContext().getAttribute("FILES_DIR")+File.separator+fileItem.getName());
-                System.out.println("Absolute Path at server="+file.getAbsolutePath());
                 fileItem.write(file);
-                out.write("File "+fileItem.getName()+ " uploaded successfully.");
-                out.write("<br>");
-                out.write("<a href=\"UploadDownloadFileServlet?fileName="+fileItem.getName()+"\">Download "+fileItem.getName()+"</a>");
             }
         } catch (FileUploadException e) {
-            out.write("Exception in uploading file.");
         } catch (Exception e) {
-            out.write("Exception in uploading file.");
         }
-        out.write("</body></html>");
     }
  
 }
