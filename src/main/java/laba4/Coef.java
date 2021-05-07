@@ -34,7 +34,7 @@ public class Coef {
 				} else {
 					inf = line.substring(0, end);
 				}
-				if (inf != null) {
+				if ((inf.indexOf(' ')) == -1) {
 				btCoef[i][j] = Integer.parseInt(inf);
 				}
 			}
