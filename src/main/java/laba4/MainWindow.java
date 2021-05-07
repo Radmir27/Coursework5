@@ -20,7 +20,7 @@ public class MainWindow extends HttpServlet {
 		RequestCalc Calc = RequestCalc.fromRequestParameters(request);
 		Calc.setAsRequestAttributesAndCalculate(request);
 		
-		request.getRequestDispatcher("/Results.jsp").forward(request, response);
+		request.getRequestDispatcher("/Form.jsp").forward(request, response);
 	}
 	
 	private static class RequestCalc {
@@ -32,14 +32,6 @@ public class MainWindow extends HttpServlet {
 		private final String cm;
 		private final String pricep;
 		private final String promo;
-		
-		private String categoryName;
-		private String cityName;
-		private String cbmName;
-		private String ageName;
-		private String experienceName;
-		private String cmName;
-		private String pricepName;
 		
 		private float result;
 						
@@ -56,7 +48,7 @@ public class MainWindow extends HttpServlet {
 		
 		public static RequestCalc fromRequestParameters(HttpServletRequest request) {
 			return new RequestCalc(
-			request.getAttribute("category").toString(),
+			request.getParameter("category"),
 			request.getParameter("city"),
 			request.getParameter("cbm"),
 			request.getParameter("age"),
@@ -67,6 +59,15 @@ public class MainWindow extends HttpServlet {
 			}
 				
 		public void setAsRequestAttributesAndCalculate(HttpServletRequest request) throws IOException {
+			/*request.setAttribute("category", category);
+			request.setAttribute("city", city);
+			request.setAttribute("cbm", cbm);
+			request.setAttribute("age", age);
+			request.setAttribute("experience", experience);
+			request.setAttribute("cm", cm);
+			request.setAttribute("pricep", pricep);
+			request.setAttribute("promo", promo);
+			*/
 			int category_try;
 			int city_try;
 			int cbm_try;
@@ -95,16 +96,6 @@ public class MainWindow extends HttpServlet {
 				OSAGOwithPromo osago = new OSAGOwithPromo();
 				result = osago.calculation(category_try, city_try, cbm_try, age_try, experience_try, cm_try, promo_try);
 				request.setAttribute("result", result);
-				
-				categoryName = request.getAttribute("category").toString();
-				request.setAttribute("category_result", categoryName);
-				request.setAttribute("city_result", city);
-				request.setAttribute("cbm_result", cbm);
-				request.setAttribute("age_result", age);
-				request.setAttribute("experience_result", experience);
-				request.setAttribute("cm_result", cm);
-				request.setAttribute("pricep_result", pricep);
-				request.setAttribute("promo_result", promo);
 			}
 		}
 	}
