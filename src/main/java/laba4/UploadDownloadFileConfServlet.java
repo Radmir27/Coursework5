@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
  
-@WebServlet("/UploadDownloadFileServlet")
+@WebServlet("/UploadDownloadFileConfServlet")
 public class UploadDownloadFileConfServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     @Override
