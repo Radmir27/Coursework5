@@ -169,7 +169,7 @@
 			</div>
 			<div class="item">
 				<label for="promo">Промокод: </label>
-    			<input type="text" name="promo" value="">
+    			<input type="text" name="promo" id="first" value="${promo}">
 			</div>
 			<div class="item">
 				<label for="price">Стоимость (руб.): </label>
