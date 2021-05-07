@@ -77,6 +77,7 @@
             </header>
            <div class="title"><h1>Калькулятор расчета ОСАГО</h1></div>
            <div class="form">
+           <form action="/JavaCalc" method="post">
 			<div class="item">
     			<label for="category">Категория:</label>
     			<select id="category" name="category">
@@ -175,10 +176,9 @@
 				<input readonly type="text" name="price" id="price" value="${result}">
 			</div>
 			<div class="item">
-			<form action="/JavaCalc" method="post">
             	<input type="submit" name="sign" value="Расчитать">
-            	</form>
             </div>
+           </form>
        </div>
         
         
