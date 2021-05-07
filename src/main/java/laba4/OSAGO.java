@@ -18,8 +18,8 @@ public abstract class OSAGO {
 			int pricep_try) throws IOException {
 		Coef coef = new Coef();
 		coef.setConf();
-		btMin = coef.btCoef[category_try][1];
-		btMax = coef.btCoef[category_try][2];
+		btMin = coef.btCoef[category_try][0];
+		btMax = coef.btCoef[category_try][1];
 		ct = coef.cityCoef[city_try];
 		cbm = coef.cbmCoef[cbm_try];
 		csv = coef.csvsCoef[age_try][experience_try];
