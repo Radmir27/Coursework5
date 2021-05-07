@@ -31,7 +31,7 @@ public abstract class OSAGO {
 		staf = coef.stafConf;
 	}
 	
-	abstract void calculation(int category_try, int city_try, int cbm_try, int age_try, int experience_try, int cm_try,
+	abstract float calculation(int category_try, int city_try, int cbm_try, int age_try, int experience_try, int cm_try,
 			int pricep_try, String promo_try) throws IOException;
 
 }

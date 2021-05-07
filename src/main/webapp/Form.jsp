@@ -81,7 +81,7 @@
            <form action="/JavaCalc" method="post">
 			<div class="item">
     			<label for="category">Категория:</label>
-    			<select width: 300px>
+    			<select>
 					<option value="0">А, М Мотоциклы, мопеды и легкие квадрициклы</option>
 					<option value="1">B, BE физических лиц, индивидуальных предпринимателей</option>
 					<option value="2">В, ВЕ юридических лиц</option>
@@ -174,7 +174,7 @@
 			</div>
 			<div class="item">
 				<label for="price">Стоимость: </label>
-				<input readonly type="text" name="price" id="price" value="">
+				<input readonly type="text" name="price" id="price" value="">${result}
 			</div>
 			<div class="item">
             	<input type="submit" name="sign" value="Расчитать">
