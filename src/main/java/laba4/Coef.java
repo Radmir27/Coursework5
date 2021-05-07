@@ -30,13 +30,11 @@ public class Coef {
 				line = reader.readLine();
 				int end = line.indexOf(' '); // ищем индекс первого пробела
 				if (end == -1) {
-					inf = line.substring(0);
+					inf = line.substring(1);
 				} else {
 					inf = line.substring(0, end);
 				}
-				if ((inf.indexOf(' ')) == -1) {
 				btCoef[i][j] = Integer.parseInt(inf);
-				}
 			}
 		}
 		line = reader.readLine();
