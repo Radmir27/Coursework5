@@ -17,6 +17,12 @@ public class Coef {
 	public float stafConf;		// расчитывается от ставке
 	
 	public void setConf() throws IOException {
+		btCoef = new int[12][2];
+		cityCoef = new float[5];
+		cbmCoef = new float[15];
+		csvsCoef = new float[7][8];
+		cmCoef = new float[6];
+		cprCoef = new float[12];
 		File file = new File("config.txt");
         //создаем объект FileReader для объекта File
         FileReader fr = new FileReader(file);
@@ -24,45 +30,81 @@ public class Coef {
         BufferedReader reader = new BufferedReader(fr);
         // считаем сначала первую строку
         String line;
-        String[] words;
-		for (int i = 0; i < 11; i++) {
+        String inf;
+		for (int i = 0; i < 12; i++) {
 			line = reader.readLine();
-			words = line.split(" ");
 			for (int j = 0; j < 2; j++) {
-				btCoef[i][j] = Integer.parseInt(words[j]);
+				int end = line.indexOf(' '); // ищем индекс первого пробела
+				if (end == -1) {
+					inf = line.substring(0);
+				} else {
+					inf = line.substring(0, end);
+				}
+				line = line.substring(end+1);
+				btCoef[i][j] = Integer.parseInt(inf);
 			}
 		}
 		line = reader.readLine();
-		words = line.split(" ");
 		for (int i = 0; i < 5; i++) {
-			cityCoef[i] = (float) Integer.parseInt(words[i]);
+			int end = line.indexOf(' '); // ищем индекс первого пробела
+			if (end == -1) {
+				inf = line.substring(0);
+			} else {
+				inf = line.substring(0, end);
+			}
+			line = line.substring(end+1);
+			cityCoef[i] = Float.parseFloat(inf);
 		}
 		line = reader.readLine();
-		words = line.split(" ");
 		for (int i = 0; i < 15; i++) {
-			cbmCoef[i] = (float) Integer.parseInt(words[i]);
+			int end = line.indexOf(' '); // ищем индекс первого пробела
+			if (end == -1) {
+				inf = line.substring(0);
+			} else {
+				inf = line.substring(0, end);
+			}
+			line = line.substring(end+1);
+			cbmCoef[i] = Float.parseFloat(inf);
 		}
 		for (int i = 0; i < 7; i++) {
 			line = reader.readLine();
-			words = line.split(" ");
 			for (int j = 0; j < 8; j++) {
-				csvsCoef[i][j] = (float) Integer.parseInt(words[j]);
+				int end = line.indexOf(' '); // ищем индекс первого пробела
+				if (end == -1) {
+					inf = line.substring(0);
+				} else {
+					inf = line.substring(0, end);
+				}
+				line = line.substring(end+1);
+				csvsCoef[i][j] = Float.parseFloat(inf);
 			}
 		}
 		line = reader.readLine();
-		words = line.split(" ");
 		for (int i = 0; i < 6; i++) {
-			cmCoef[i] = (float) Integer.parseInt(words[i]);
+			int end = line.indexOf(' '); // ищем индекс первого пробела
+			if (end == -1) {
+				inf = line.substring(0);
+			} else {
+				inf = line.substring(0, end);
+			}
+			line = line.substring(end+1);
+			cmCoef[i] = Float.parseFloat(inf);
 		}
 		line = reader.readLine();
-		words = line.split(" ");
 		for (int i = 0; i < 12; i++) {
-			cprCoef[i] = (float) Integer.parseInt(words[i]);
+			int end = line.indexOf(' '); // ищем индекс первого пробела
+			if (end == -1) {
+				inf = line.substring(0);
+			} else {
+				inf = line.substring(0, end);
+			}
+			line = line.substring(end+1);
+			cprCoef[i] = Float.parseFloat(inf);
 		}
 		line = reader.readLine();
-		promoConf = (float) Integer.parseInt(line);
+		promoConf = Float.parseFloat(line);
 		line = reader.readLine();
-		stafConf = (float) Integer.parseInt(line);
+		stafConf = Float.parseFloat(line);
 		fr.close();
 		reader.close();
 	}
