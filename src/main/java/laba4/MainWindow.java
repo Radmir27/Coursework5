@@ -16,7 +16,7 @@ public class MainWindow extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doClick(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestCalc Calc = RequestCalc.fromRequestParameters(request);
 		Calc.setAsRequestAttributesAndCalculate(request);
 	}
@@ -33,26 +33,26 @@ public class MainWindow extends HttpServlet {
 		
 		//private float result;
 						
-		private RequestCalc (String category, String city, String cbm, String age, String experience, String cm, String pricep,String promo) {
-			this.category = category;
-			this.city = city;
-			this.cbm = cbm;
-			this.age = age;
-			this.experience = experience;
-			this.cm = cm;
-			this.pricep = pricep;
+		private RequestCalc (Object object, Object object2, Object object3, Object object4, Object object5, Object object6, Object object7,String promo) {
+			this.category = (String) object;
+			this.city = (String) object2;
+			this.cbm = (String) object3;
+			this.age = (String) object4;
+			this.experience = (String) object5;
+			this.cm = (String) object6;
+			this.pricep = (String) object7;
 			this.promo = promo;
 			}
 		
 		public static RequestCalc fromRequestParameters(HttpServletRequest request) {
 			return new RequestCalc(
-			request.getParameter("category"),
-			request.getParameter("city"),
-			request.getParameter("cbm"),
-			request.getParameter("age"),
-			request.getParameter("experience"),
-			request.getParameter("cm"),
-			request.getParameter("pricep"),
+			request.getAttribute("category"),
+			request.getAttribute("city"),
+			request.getAttribute("cbm"),
+			request.getAttribute("age"),
+			request.getAttribute("experience"),
+			request.getAttribute("cm"),
+			request.getAttribute("pricep"),
 			request.getParameter("promo"));
 			}
 				
