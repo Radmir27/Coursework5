@@ -59,14 +59,6 @@ public class MainWindow extends HttpServlet {
 			}
 				
 		public void setAsRequestAttributesAndCalculate(HttpServletRequest request) throws IOException {
-			request.setAttribute("category", category);
-			request.setAttribute("city", city);
-			request.setAttribute("cbm", cbm);
-			request.setAttribute("age", age);
-			request.setAttribute("experience", experience);
-			request.setAttribute("cm", cm);
-			request.setAttribute("pricep", pricep);
-			request.setAttribute("promo", promo);
 			
 			int category_try;
 			int city_try;
@@ -96,6 +88,15 @@ public class MainWindow extends HttpServlet {
 				OSAGOwithPromo osago = new OSAGOwithPromo();
 				result = osago.calculation(category_try, city_try, cbm_try, age_try, experience_try, cm_try, promo_try);
 				request.setAttribute("result", result);
+				
+				request.setAttribute("category", category);
+				request.setAttribute("city", city);
+				request.setAttribute("cbm", cbm);
+				request.setAttribute("age", age);
+				request.setAttribute("experience", experience);
+				request.setAttribute("cm", cm);
+				request.setAttribute("pricep", pricep);
+				request.setAttribute("promo", promo);
 			}
 		}
 	}
