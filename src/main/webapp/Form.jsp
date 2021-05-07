@@ -81,7 +81,7 @@
            <form action="/JavaCalc" method="get">
 			<div class="item">
     			<label for="category">Категория:</label>
-    			<select>
+    			<select id="category" name="category">
 					<option value="0">А, М Мотоциклы, мопеды и легкие квадрициклы</option>
 					<option value="1">B, BE физических лиц, индивидуальных предпринимателей</option>
 					<option value="2">В, ВЕ юридических лиц</option>
@@ -98,7 +98,7 @@
 			</div>
 			<div class="item">
 				<label for="city">Регион: </label>
-   				<select>
+   				<select id="city" name="city">
 					<option value="0">Уфа</option>
 					<option value="1">Воронеж</option>
 					<option value="2">Омск</option>
@@ -108,7 +108,7 @@
 			</div>
 			<div class="item">
 				<label for="cbm">КБМ водителя: </label>
-    			<select>
+    			<select id="cbm" name="cbm">
 					<option value="0">M</option>
 					<option value="1">0</option>
 					<option value="2">1</option>
@@ -128,7 +128,7 @@
 			</div>
 			<div class="item">
 				<label for="age">Возраст: </label>
-    			<select>
+    			<select id="age" name="age">
 					<option value="0">16 - 21</option>
 					<option value="1">22 - 24</option>
 					<option value="2">25 - 29</option>
@@ -141,7 +141,7 @@
 			</div>
 			<div class="item">
  				<label for="experience">Стаж (лет): </label>
-    			<select>
+    			<select id="experience" name="experience">
 					<option value="0">0</option>
 					<option value="1">1</option>
 					<option value="2">2</option>
@@ -154,7 +154,7 @@
 			</div>
 			<div class="item">
 				<label for="cm">Мощность (л.с.): </label>
-    			<select>
+    			<select id="cm" name="cm">
 					<option value="0">До 50</option>
 					<option value="1">От 51 до 70</option>
 					<option value="2">От 71 до 100</option>
@@ -179,16 +179,10 @@
 			<div class="item">
             	<input type="submit" name="sign" value="Расчитать">
             </div>
-            <button onclick="foo1()">Жми!</button>
            </form>
        </div>
         
         
 	</body>
-	<script>
-function foo1(){
-alert(document.getElementById('category').value*document.getElementById('city').value);
-}
-</script>
 
 </html>
