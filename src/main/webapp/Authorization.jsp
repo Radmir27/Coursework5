@@ -29,14 +29,14 @@
     <!--STYLE_END-->
     <div class="title"><h1>АВТОРИЗАЦИЯ</h1></div> 
     <div class="form">
-    <form action="/JavaCalc" method="post">
+    <form action="/JavaLogin" method="post">
         <div class="item">
-            <label for="first">Логин:</label>
-            <input type="text" name="first" id="first" value="">
+            <label for="login">Логин:</label>
+            <input type="text" name="login" id="login" value="">
         </div>
         <div class="item">
-            <label for="second">Пароль: </label>
-            <input type="password" name="second" id="second" value="">
+            <label for="pass">Пароль: </label>
+            <input type="password" name="pass" id="pass" value="">
         </div>
         <div class="item">
             <input type="submit" name="sign" value="Вход">
