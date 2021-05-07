@@ -20,7 +20,7 @@ public class MainWindow extends HttpServlet {
 		RequestCalc Calc = RequestCalc.fromRequestParameters(request);
 		Calc.setAsRequestAttributesAndCalculate(request);
 		
-		request.getRequestDispatcher("/Result.jsp").forward(request, response);
+		request.getRequestDispatcher("/Results.jsp").forward(request, response);
 	}
 	
 	private static class RequestCalc {
