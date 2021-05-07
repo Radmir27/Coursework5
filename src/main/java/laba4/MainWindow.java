@@ -33,6 +33,14 @@ public class MainWindow extends HttpServlet {
 		private final String pricep;
 		private final String promo;
 		
+		private String categoryName;
+		private String cityName;
+		private String cbmName;
+		private String ageName;
+		private String experienceName;
+		private String cmName;
+		private String pricepName;
+		
 		private float result;
 						
 		private RequestCalc (String category, String city, String cbm, String age, String experience, String cm, String pricep,String promo) {
@@ -48,7 +56,7 @@ public class MainWindow extends HttpServlet {
 		
 		public static RequestCalc fromRequestParameters(HttpServletRequest request) {
 			return new RequestCalc(
-			request.getParameter("category"),
+			request.getAttribute("category").toString(),
 			request.getParameter("city"),
 			request.getParameter("cbm"),
 			request.getParameter("age"),
@@ -88,7 +96,8 @@ public class MainWindow extends HttpServlet {
 				result = osago.calculation(category_try, city_try, cbm_try, age_try, experience_try, cm_try, promo_try);
 				request.setAttribute("result", result);
 				
-				request.setAttribute("category_result", category);
+				categoryName = request.getAttribute("category").toString();
+				request.setAttribute("category_result", categoryName);
 				request.setAttribute("city_result", city);
 				request.setAttribute("cbm_result", cbm);
 				request.setAttribute("age_result", age);
