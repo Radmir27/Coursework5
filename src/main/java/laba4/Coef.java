@@ -16,9 +16,6 @@ public class Coef {
 	public float promoConf;		// расчитывается от промокода
 	public float stafConf;		// расчитывается от ставке
 	
-	//public int totalMin;	// возможно будет не здесь
-	//public int totalMax;	// возможно будет не здесь
-	
 	public void setConf() throws IOException {
 		File file = new File("config.txt");
         //создаем объект FileReader для объекта File

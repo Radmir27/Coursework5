@@ -2,20 +2,48 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Результат расчета площади равнобедреннего треугольника</title>
-</head>
 <body bgcolor="#DAD8FE" leftmargin="40">
-<h1>Результат расчета площади равнобедреннего треугольника</h1>
-<h2>Ваши введеные данные:</h2>
-<p><strong>Основание треугольника:</strong> ${first_result}</p>
-<p><strong>Высота треугольника:</strong> ${second_result}</p>
-<p><strong>Результат:</strong> ${result}</p>
+    <!--STYLE_START-->
+    <style>
+        .title{
+            margin: auto;
+            text-align: center;
+        }
 
-<form action="${pageContext.request.contextPath}/Form.jsp">
-    <input type="submit" name="sign" value="Назад">
+        .form {
+            display:flex;
+            justify-content: center;
+            max-width: 300px;
+            margin: auto;
+            border: 2px solid gray;
+            border-radius: 33px;
+            padding:5px;
+        }
+
+        .form .item {
+            display:flex;
+            flex-direction:column;
+            margin: 10px;
+        }
+    </style>
+    <!--STYLE_END-->
+    <div class="title"><h1>АВТОРИЗАЦИЯ</h1></div> 
+    <div class="form">
+    <form action="/JavaCalc" method="post">
+        <div class="item">
+            <label for="first">Логин:</label>
+            <input type="text" name="first" id="first" value="">
+        </div>
+        <div class="item">
+            <label for="second">Пароль: </label>
+            <input type="password" name="second" id="second" value="">
+        </div>
+        <div class="item">
+            <input type="submit" name="sign" value="Вход">
+        </div>
     </form>
+</div>
+
 
 </body>
 </html>
