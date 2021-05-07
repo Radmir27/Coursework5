@@ -14,8 +14,7 @@ public abstract class OSAGO {
 	protected float promo;
 	protected float staf;
 	
-	public void setConf(int category_try, int city_try, int cbm_try, int age_try, int experience_try, int cm_try,
-			int pricep_try) throws IOException {
+	public void setConf(int category_try, int city_try, int cbm_try, int age_try, int experience_try, int cm_try) throws IOException {
 		Coef coef = new Coef();
 		coef.setConf();
 		btMin = coef.btCoef[category_try][0];
@@ -24,12 +23,11 @@ public abstract class OSAGO {
 		cbm = coef.cbmCoef[cbm_try];
 		csv = coef.csvsCoef[age_try][experience_try];
 		cm = coef.cmCoef[cm_try];
-		cpr = coef.cprCoef[pricep_try];
+		cpr = coef.cprCoef[category_try];
 		promo = coef.promoConf;
 		staf = coef.stafConf;
 	}
 	
 	abstract float calculation(int category_try, int city_try, int cbm_try, int age_try, int experience_try, int cm_try,
-			int pricep_try, String promo_try) throws IOException;
-
+			String promo_try) throws IOException;
 }
