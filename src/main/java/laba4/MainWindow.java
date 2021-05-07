@@ -20,7 +20,7 @@ public class MainWindow extends HttpServlet {
 		RequestCalc Calc = RequestCalc.fromRequestParameters(request);
 		Calc.setAsRequestAttributesAndCalculate(request);
 		
-		request.getRequestDispatcher("/Form.jsp").forward(request, response);
+		request.getRequestDispatcher("/Result.jsp").forward(request, response);
 	}
 	
 	private static class RequestCalc {
@@ -88,14 +88,14 @@ public class MainWindow extends HttpServlet {
 				result = osago.calculation(category_try, city_try, cbm_try, age_try, experience_try, cm_try, promo_try);
 				request.setAttribute("result", result);
 				
-				request.setAttribute("category", category);
-				request.setAttribute("city", city);
-				request.setAttribute("cbm", cbm);
-				request.setAttribute("age", age);
-				request.setAttribute("experience", experience);
-				request.setAttribute("cm", cm);
-				request.setAttribute("pricep", pricep);
-				request.setAttribute("promo", promo);
+				request.setAttribute("category_result", category);
+				request.setAttribute("city_result", city);
+				request.setAttribute("cbm_result", cbm);
+				request.setAttribute("age_result", age);
+				request.setAttribute("experience_result", experience);
+				request.setAttribute("cm_result", cm);
+				request.setAttribute("pricep_result", pricep);
+				request.setAttribute("promo_result", promo);
 			}
 		}
 	}
