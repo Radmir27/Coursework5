@@ -41,7 +41,7 @@
         <div class="item">
             <input type="submit" name="sign" value="Вход">
 		<div class="item">
-			<input type="button" value="Назад" onclick="location.herf='From.jsp'">
+			<input type="button" value="Назад" onclick="history.back();"/>
         </div>
     </form>
 </div>
