@@ -17,7 +17,7 @@
             margin: auto;
             border: 2px solid gray;
             border-radius: 33px;
-            padding:5px;
+            padding:25px;
         }
 
         .form .item {
@@ -40,6 +40,8 @@
         </div>
         <div class="item">
             <input type="submit" name="sign" value="Вход">
+		<div class="item">
+			<input type="button" value="Назад" onclick="location.herf='/From.jsp'">
         </div>
     </form>
 </div>

@@ -18,9 +18,9 @@
            </style>
            <!--STYLE_END-->
            <div class="title"><h1>Разработчики:</h1></div>
-           <div class="title"><p>Родя</p></div>
-           <div class="title"><p>Брагищ</p></div> 
-           <div class="title"><p>Шустрый</p></div>     
+           <div class="title"><p>Модератор/Разработчик: Абкаримов Р.М., Студенческий номер: 19130598</p></div>
+           <div class="title"><p>Разработчик: Бражников Д.А., Студенческий номер: 19130623</p></div> 
+           <div class="title"><p>Разработчик: Ушаков М.О., Студенческий номер: 19130644</p></div>     
 	</body>
 
 </html>
