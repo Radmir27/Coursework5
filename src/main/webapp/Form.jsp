@@ -179,10 +179,16 @@
 			<div class="item">
             	<input type="submit" name="sign" value="Расчитать">
             </div>
+            <button onclick="foo1()">Жми!</button>
            </form>
        </div>
         
         
 	</body>
+	<script>
+function foo1(){
+alert(document.getElementById('category').value*document.getElementById('city').value);
+}
+</script>
 
 </html>
