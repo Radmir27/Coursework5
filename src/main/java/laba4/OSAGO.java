@@ -16,7 +16,7 @@ public abstract class OSAGO {
 	
 	public void setConf(int category_try, int city_try, int cbm_try, int age_try, int experience_try, int cm_try) throws IOException {
 		Coef coef = new Coef();
-		coef.setConf();
+		coef.setParam();
 		btMin = coef.btCoef[category_try][0];
 		btMax = coef.btCoef[category_try][1];
 		ct = coef.cityCoef[city_try];

@@ -7,14 +7,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Check {
+public class Check implements parametrs {
 
 	private List<String> logins = new ArrayList<>();
     private List<String> passwords = new ArrayList<>();
 
     public boolean check(String login, String password) throws IOException {
     	boolean lp = false;
-        setLogPass();
+        setParam();
         for (int i = 0; i < logins.size(); i++) {
             if (login.equals(logins.get(i)) && password.equals(passwords.get(i)) && !login.equals(null) && !login.equals(null)) {
                 lp = true;
@@ -24,7 +24,7 @@ public class Check {
         return lp;
     }
 
-    private void setLogPass() throws IOException {
+    public void setParam() throws IOException {
     	File file = new File("LogPass.txt");
         FileReader fr = new FileReader(file);
         BufferedReader reader = new BufferedReader(fr);

@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class Coef {
+public class Coef implements parametrs {
 	
 	public int[][] btCoef;		// расчитывается от категории
 	public float[] cityCoef;	// расчитывается от города
@@ -16,7 +16,7 @@ public class Coef {
 	public float promoConf;		// расчитывается от промокода
 	public float stafConf;		// расчитывается от ставке
 	
-	public void setConf() throws IOException {
+	public void setParam() throws IOException {
 		btCoef = new int[12][2];
 		cityCoef = new float[5];
 		cbmCoef = new float[15];
