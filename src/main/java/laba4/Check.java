@@ -26,15 +26,12 @@ public class Check {
 
     private void setLogPass() throws IOException {
     	File file = new File("LogPass.txt");
-        //создаем объект FileReader для объекта File
         FileReader fr = new FileReader(file);
-        //создаем BufferedReader с существующего FileReader для построчного считывания
         BufferedReader reader = new BufferedReader(fr);
-        // считаем сначала первую строку
         String line;
         while((line = reader.readLine()) != null) {
         	System.out.println("��� " + line);
-            int end = line.indexOf(' '); // ищем индекс первого пробела
+            int end = line.indexOf(' ');
             logins.add(line.substring(0, end));
             line = line.substring(end+1);
             passwords.add(line.substring(0));
