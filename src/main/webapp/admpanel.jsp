@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <title>Админская панель</title>
  </head>
- <body>
+ 		<body bgcolor="#DAD8FE" leftmargin="40">
 			 <style>
                .title{
                  margin: auto;
@@ -40,7 +40,6 @@
               <div class="container">
                 <nav>
                   <ul>
-                    <li><a href="">О калькуляторе</a></li>
                     <li><a href="">О нас</a></li>
                     <li><a href="">Калькулятор</a></li>
                   </ul>

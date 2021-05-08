@@ -13,8 +13,42 @@
                .title{
                    margin: auto;
                    text-align: center;
-                   vertical-align: middle; /*спустить бы текст в цетр экрана как-то
+                   vertical-align: middle;
                }
+               nav {
+                   float: right;
+               }
+               nav ul {
+                 margin: 0;
+                 padding: 0;
+                 list-style: none;
+               }
+               nav li {
+                 display: inline-block;
+               }
+               .container:after {
+                 content: "";
+                 display: table;
+                 clear: both;
+               }
+               .container {
+                 width: 100%;
+                 max-width: 1024px;
+                 padding: 15px;
+                 margin: 0 auto;
+               }
+           </style>
+           <!--STYLE_END-->
+                       <header>
+              <div class="container">
+                <nav>
+                  <ul>
+                    <li><a href="/Authorization.jsp">Вход</a></li>
+                    <li><a href="/authors.jsp">О нас</a></li>
+                    <li><a href="files/PDF.pdf" download>Выгрузить PDF</a></li>
+                  </ul>
+                </nav>
+              </div>
            </style>
            <!--STYLE_END-->
            <div class="title"><h1>Разработчики:</h1></div>

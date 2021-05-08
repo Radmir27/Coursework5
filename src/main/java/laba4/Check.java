@@ -30,7 +30,6 @@ public class Check {
         BufferedReader reader = new BufferedReader(fr);
         String line;
         while((line = reader.readLine()) != null) {
-        	System.out.println("шаг " + line);
             int end = line.indexOf(' ');
             logins.add(line.substring(0, end));
             line = line.substring(end+1);
