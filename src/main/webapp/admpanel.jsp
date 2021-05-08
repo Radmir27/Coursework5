@@ -40,8 +40,8 @@
               <div class="container">
                 <nav>
                   <ul>
-                    <li><a href="">О нас</a></li>
-                    <li><a href="">Калькулятор</a></li>
+                    <li><a href="/authors.jsp">О нас</a></li>
+                    <li><a href="/Form.jsp">Калькулятор</a></li>
                   </ul>
                 </nav>
               </div>
