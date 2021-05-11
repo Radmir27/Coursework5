@@ -67,7 +67,7 @@ public class MainWindow extends HttpServlet {
 			request.setAttribute("cm", cm);
 			request.setAttribute("pricep", pricep);*/
 			
-			request.setAttribute("category" + category, "selected=\"selected\"");
+			request.setAttribute("category" + category, "selected");
 			
 			request.setAttribute("promo", promo);
 			
