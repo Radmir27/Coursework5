@@ -4,14 +4,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Результат расчета площади равнобедреннего треугольника</title>
+<title>Результат расчета ОСАГО</title>
 </head>
-<body bgcolor="#DAD8FE" leftmargin="40">
-<h1>Результат расчета площади равнобедреннего треугольника</h1>
+<body>
+<h1>Результат расчета ОСАГО</h1>
 <h2>Ваши введеные данные:</h2>
-<p><strong>Основание треугольника:</strong> ${first_result}</p>
-<p><strong>Высота треугольника:</strong> ${second_result}</p>
-<p><strong>Результат:</strong> ${result}</p>
+<p><strong>Категория:</strong> ${category_result}</p>
+<p><strong>Регион:</strong> ${city_result}</p>
+<p><strong>КБМ водителя:</strong> ${cbm_result}</p>
+<p><strong>Возраст:</strong> ${age_result}</p>
+<p><strong>Стаж (лет):</strong> ${experience_result}</p>
+<p><strong>Мощность (л.с.):</strong> ${cm_result}</p>
+<p><strong>Наличие прицепа:</strong> ${pricep_result}</p>
+<p><strong>Промокод:</strong> ${promo_result}</p>
+<p><strong>Стоимость:</strong> ${result}</p>
 
 <form action="${pageContext.request.contextPath}/Form.jsp">
     <input type="submit" name="sign" value="Назад">
