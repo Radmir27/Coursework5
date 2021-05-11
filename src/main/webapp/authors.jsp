@@ -15,8 +15,11 @@
                    text-align: center;
                    vertical-align: middle;
                }
-               nav {
-                   float: right;
+               .logo {
+               		float: left;
+               }
+                nav {
+                   	float: right;
                }
                nav ul {
                  margin: 0;
@@ -37,21 +40,25 @@
                  padding: 15px;
                  margin: 0 auto;
                }
+               nav a {
+               	text-decoration: none;
+               	line-height: 38px;
+               }
            </style>
            <!--STYLE_END-->
                        <header>
               <div class="container">
+              	<a href="/" class="logo">PI221GR5</a>
                 <nav>
                   <ul>
                     <li><a href="/index.jsp">Вход</a></li>
                     <li><a href="/authors.jsp">О нас</a></li>
                     <li><a href="/Form.jsp">Калькулятор</a></li>
-                    <li><a href="filesystem: target/osagos.pdf" download>Выгрузить PDF</a></li>
+                    <li><a href="/osagos.pdf" download="osago">Выгрузить PDF</a></li>
                   </ul>
                 </nav>
               </div>
-           </style>
-           <!--STYLE_END-->
+           </header>
            <div class="title"><h1>Разработчики:</h1></div>
            <div class="title"><p>Модератор/Разработчик: Абкаримов Р.М., Студенческий номер: 19130598</p></div>
            <div class="title"><p>Разработчик: Бражников Д.А., Студенческий номер: 19130623</p></div> 
