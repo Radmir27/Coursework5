@@ -12,8 +12,11 @@
                  margin: auto;
                  text-align: center;
                }
+               .logo {
+               		float: left;
+               }
                 nav {
-                   float: right;
+                   	float: right;
                }
                nav ul {
                  margin: 0;
@@ -34,10 +37,15 @@
                  padding: 15px;
                  margin: 0 auto;
                }
+               nav a {
+               	text-decoration: none;
+               	line-height: 38px;
+               }
            </style>
            <!--STYLE_END-->
                        <header>
               <div class="container">
+              	<a href="/" class="logo">PI221GR5</a>
                 <nav>
                   <ul>
                     <li><a href="/authors.jsp">О нас</a></li>
@@ -49,11 +57,6 @@
 					<p>Загрузить новые коэффициенты на сервер</p>
    					<p><input type="file" name="config" requered accept="*.pdf/*.txt">
   				<input type="submit" value="Отправить"></p>
-	</form>
-			<form action="UploadDownloadFileAdminServlet" enctype="multipart/form-data" method="post">
-   					<p>Загрузить новые логины с паролем для входа администратором</p>
-   					<p><input type="file" name="arch" requered accept="*.pdf/*.txt">
-				<input type="submit" value="Отправить"></p>
   </form>
  </body>
 </html>

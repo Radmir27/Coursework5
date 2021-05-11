@@ -43,10 +43,10 @@
               <div class="container">
                 <nav>
                   <ul>
-                    <li><a href="/Authorization.jsp">Вход</a></li>
+                    <li><a href="/index.jsp">Вход</a></li>
                     <li><a href="/authors.jsp">О нас</a></li>
                     <li><a href="/Form.jsp">Калькулятор</a></li>
-                    <li><a href="files/PDF.pdf" download>Выгрузить PDF</a></li>
+                    <li><a href="osagos.pdf" download>Выгрузить PDF</a></li>
                   </ul>
                 </nav>
               </div>

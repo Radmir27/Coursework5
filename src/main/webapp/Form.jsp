@@ -40,8 +40,11 @@
                    width: 100%;
                    justify-content: space-between;
                }
-               nav {
-                   float: right;
+               .logo {
+               		float: left;
+               }
+                nav {
+                   	float: right;
                }
                nav ul {
                  margin: 0;
@@ -62,15 +65,20 @@
                  padding: 15px;
                  margin: 0 auto;
                }
+               nav a {
+               	text-decoration: none;
+               	line-height: 38px;
+               }
            </style>
            <!--STYLE_END-->
                        <header>
               <div class="container">
+              	<a href="/" class="logo">PI221GR5</a>
                 <nav>
                   <ul>
                     <li><a href="/Authorization.jsp">Вход</a></li>
                     <li><a href="/authors.jsp">О нас</a></li>
-                    <li><a href="files/PDF.pdf" download>Выгрузить PDF</a></li>
+                    <li><a href="osagos.pdf" download>Выгрузить PDF</a></li>
                   </ul>
                 </nav>
               </div>
