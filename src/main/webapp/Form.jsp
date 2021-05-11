@@ -149,14 +149,14 @@
 			<div class="item">
  				<label for="experience">Стаж (лет): </label>
     			<select id="experience" name="experience">
-					<option ${exeperience0} value="0">0</option>
-					<option ${exeperience1} value="1">1</option>
-					<option ${exeperience2} value="2">2</option>
-					<option ${exeperience3} value="3">3 - 4</option>
-					<option ${exeperience4} value="4">5 - 6</option>
-					<option ${exeperience5} value="5">7 - 9</option>
-					<option ${exeperience6} value="6">10 - 14</option>
-					<option ${exeperience7} value="7">более 14</option>
+					<option ${experience0} value="0">0</option>
+					<option ${experience1} value="1">1</option>
+					<option ${experience2} value="2">2</option>
+					<option ${experience3} value="3">3 - 4</option>
+					<option ${experience4} value="4">5 - 6</option>
+					<option ${experience5} value="5">7 - 9</option>
+					<option ${experience6} value="6">10 - 14</option>
+					<option ${experience7} value="7">более 14</option>
 				</select>
 			</div>
 			<div class="item">
@@ -172,7 +172,7 @@
 			</div>
 			<div class="item">
 				<label for="pricep">Наличие прицепа: </label>
-    			<input type="radio" name="pricep" ${pricep1} value="1">Да (промокод не учитывается)
+    			<input type="radio" name="pricep" ${pricep1} required value="1">Да (промокод не учитывается)
     			<input type="radio" name="pricep" ${pricep0} value="-1">Нет
 			</div>
 			<div class="item">
