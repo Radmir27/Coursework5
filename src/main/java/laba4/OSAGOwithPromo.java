@@ -11,7 +11,8 @@ public class OSAGOwithPromo extends OSAGO {
 	    	  promo = 1;
 	    	  }
 		cpr = 1;
-		float tb = ((btMax - btMin)*staf+btMin)*ct*cbm*csv*cm*cpr*promo;
+		int tbInt = (int) (((btMax - btMin)*staf+btMin)*ct*cbm*csv*cm*cpr*promo*100);
+		float tb = tbInt/100;
 		return tb;
 	}
 }
