@@ -67,8 +67,6 @@ public class MainWindow extends HttpServlet {
 			request.setAttribute("cm", cm);
 			request.setAttribute("pricep", pricep);*/
 			
-			request.setAttribute("category" + category, "selected");
-			
 			request.setAttribute("promo", promo);
 			
 			int category_try;
@@ -99,6 +97,14 @@ public class MainWindow extends HttpServlet {
 				OSAGOwithPromo osago = new OSAGOwithPromo();
 				result = osago.calculation(category_try, city_try, cbm_try, age_try, experience_try, cm_try, promo_try);
 				request.setAttribute("result", result);
+			}
+			
+			for (int i = 0; i < 12; i++) {
+				if (i == category_try) {
+					request.setAttribute("category" + i, "selected");
+				} else {
+					request.setAttribute("category" + i, "");
+				}
 			}
 		}
 	}

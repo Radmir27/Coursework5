@@ -89,18 +89,18 @@
 			<div class="item">
     			<label for="category">Категория:</label>
     			<select id="category" name="category">
-					<option selected="${category0}" value="0">А, М Мотоциклы, мопеды и легкие квадрициклы</option>
-					<option selected="${category1}" value="1">B, BE физических лиц, индивидуальных предпринимателей</option>
-					<option selected="${category2}" value="2">В, ВЕ юридических лиц</option>
-					<option selected="${category3}" value="3">B, BE используемые в качестве такси</option>
-					<option selected="${category4}" value="4">C, CE с разрешенной максимальной массой 16 тонн и менее</option>
-					<option selected="${category5}" value="5">C, CE с разрешенной максимальной массой более 16 тонн</option>
-					<option selected="${category6}" value="6">D, DE с числом пассажирских мест до 16 включительно</option>
-					<option selected="${category7}" value="7">D, DE с числом пассажирских мест более 16</option>
-					<option selected="${category8}" value="8">D, DE используемые на регулярных перевозках</option>
-					<option selected="${category9}" value="9">Tb Троллейбусы</option>
-					<option selected="${category10}" value="10">Tm Трамваи</option>
-					<option selected="${category11}" value="11">Тракторы, самоходные дорожно-строительные и иные машины</option>
+					<option ${category0} value="0">А, М Мотоциклы, мопеды и легкие квадрициклы</option>
+					<option ${category1} value="1">B, BE физических лиц, индивидуальных предпринимателей</option>
+					<option ${category2} value="2">В, ВЕ юридических лиц</option>
+					<option ${category3} value="3">B, BE используемые в качестве такси</option>
+					<option ${category4} value="4">C, CE с разрешенной максимальной массой 16 тонн и менее</option>
+					<option ${category5} value="5">C, CE с разрешенной максимальной массой более 16 тонн</option>
+					<option ${category6} value="6">D, DE с числом пассажирских мест до 16 включительно</option>
+					<option ${category7} value="7">D, DE с числом пассажирских мест более 16</option>
+					<option ${category8} value="8">D, DE используемые на регулярных перевозках</option>
+					<option ${category9} value="9">Tb Троллейбусы</option>
+					<option ${category10} value="10">Tm Трамваи</option>
+					<option ${category11} value="11">Тракторы, самоходные дорожно-строительные и иные машины</option>
 				</select> 
 			</div>
 			<div class="item">
