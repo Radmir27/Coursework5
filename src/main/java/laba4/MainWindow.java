@@ -59,13 +59,6 @@ public class MainWindow extends HttpServlet {
 			}
 				
 		public void setAsRequestAttributesAndCalculate(HttpServletRequest request) throws IOException {
-			/*request.setAttribute("category", category);
-			request.setAttribute("city", city);
-			request.setAttribute("cbm", cbm);
-			request.setAttribute("age", age);
-			request.setAttribute("experience", experience);
-			request.setAttribute("cm", cm);
-			request.setAttribute("pricep", pricep);*/
 			
 			request.setAttribute("promo", promo);
 			
@@ -97,6 +90,62 @@ public class MainWindow extends HttpServlet {
 				OSAGOwithPromo osago = new OSAGOwithPromo();
 				result = osago.calculation(category_try, city_try, cbm_try, age_try, experience_try, cm_try, promo_try);
 				request.setAttribute("result", result);
+			}
+			
+			for (int i = 0; i < 12; i++) {
+				if (i == category_try) {
+					request.setAttribute("category" + i, "selected");
+				} else {
+					request.setAttribute("category" + i, "");
+				}
+			}
+			
+			for (int i = 0; i < 5; i++) {
+				if (i == city_try) {
+					request.setAttribute("city" + i, "selected");
+				} else {
+					request.setAttribute("city" + i, "");
+				}
+			}
+			
+			for (int i = 0; i < 15; i++) {
+				if (i == cbm_try) {
+					request.setAttribute("cbm" + i, "selected");
+				} else {
+					request.setAttribute("cbm" + i, "");
+				}
+			}
+			
+			for (int i = 0; i < 8; i++) {
+				if (i == age_try) {
+					request.setAttribute("age" + i, "selected");
+				} else {
+					request.setAttribute("age" + i, "");
+				}
+			}
+			
+			for (int i = 0; i < 8; i++) {
+				if (i == experience_try) {
+					request.setAttribute("experience" + i, "selected");
+				} else {
+					request.setAttribute("experience" + i, "");
+				}
+			}
+			
+			for (int i = 0; i < 6; i++) {
+				if (i == cm_try) {
+					request.setAttribute("cm" + i, "selected");
+				} else {
+					request.setAttribute("cm" + i, "");
+				}
+			}
+			
+			if (1 == pricep_try) {
+				request.setAttribute("pricep1", "checked");
+				request.setAttribute("pricep0", "");
+			} else {
+				request.setAttribute("pricep1", "");
+				request.setAttribute("pricep0", "checked");
 			}
 		}
 	}
