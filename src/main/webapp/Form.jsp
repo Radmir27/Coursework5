@@ -106,74 +106,74 @@
 			<div class="item">
 				<label for="city">Регион: </label>
    				<select id="city" name="city">
-					<option value="0">Уфа</option>
-					<option value="1">Воронеж</option>
-					<option value="2">Омск</option>
-					<option value="3">Челябинск</option>
-					<option value="4">Москва</option>
+					<option ${city0} value="0">Уфа</option>
+					<option ${city1} value="1">Воронеж</option>
+					<option ${city2} value="2">Омск</option>
+					<option ${city3} value="3">Челябинск</option>
+					<option ${city4} value="4">Москва</option>
 				</select>
 			</div>
 			<div class="item">
 				<label for="cbm">КБМ водителя: </label>
     			<select id="cbm" name="cbm">
-					<option value="0">M</option>
-					<option value="1">0</option>
-					<option value="2">1</option>
-					<option value="3">2</option>
-					<option value="4">3</option>
-					<option value="5">4</option>
-					<option value="6">5</option>
-					<option value="7">6</option>
-					<option value="8">7</option>
-					<option value="9">8</option>
-					<option value="10">9</option>
-					<option value="11">10</option>
-					<option value="12">11</option>
-					<option value="13">12</option>
-					<option value="14">13</option>
+					<option ${cbm0} value="0">M</option>
+					<option ${cbm1} value="1">0</option>
+					<option ${cbm2} value="2">1</option>
+					<option ${cbm3} value="3">2</option>
+					<option ${cbm4} value="4">3</option>
+					<option ${cbm5} value="5">4</option>
+					<option ${cbm6} value="6">5</option>
+					<option ${cbm7} value="7">6</option>
+					<option ${cbm8} value="8">7</option>
+					<option ${cbm9} value="9">8</option>
+					<option ${cbm10} value="10">9</option>
+					<option ${cbm11} value="11">10</option>
+					<option ${cbm12} value="12">11</option>
+					<option ${cbm13} value="13">12</option>
+					<option ${cbm14} value="14">13</option>
 				</select> 
 			</div>
 			<div class="item">
 				<label for="age">Возраст: </label>
     			<select id="age" name="age">
-					<option value="0">16 - 21</option>
-					<option value="1">22 - 24</option>
-					<option value="2">25 - 29</option>
-					<option value="3">30 - 34</option>
-					<option value="4">35 - 39</option>
-					<option value="5">40 - 49</option>
-					<option value="6">50 - 59</option>
-					<option value="7">старше 59</option>
+					<option ${age0} value="0">16 - 21</option>
+					<option ${age1} value="1">22 - 24</option>
+					<option ${age2} value="2">25 - 29</option>
+					<option ${age3} value="3">30 - 34</option>
+					<option ${age4} value="4">35 - 39</option>
+					<option ${age5} value="5">40 - 49</option>
+					<option ${age6} value="6">50 - 59</option>
+					<option ${age7} value="7">старше 59</option>
 				</select>
 			</div>
 			<div class="item">
  				<label for="experience">Стаж (лет): </label>
     			<select id="experience" name="experience">
-					<option value="0">0</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3 - 4</option>
-					<option value="4">5 - 6</option>
-					<option value="5">7 - 9</option>
-					<option value="6">10 - 14</option>
-					<option value="7">более 14</option>
+					<option ${exeperience0} value="0">0</option>
+					<option ${exeperience1} value="1">1</option>
+					<option ${exeperience2} value="2">2</option>
+					<option ${exeperience3} value="3">3 - 4</option>
+					<option ${exeperience4} value="4">5 - 6</option>
+					<option ${exeperience5} value="5">7 - 9</option>
+					<option ${exeperience6} value="6">10 - 14</option>
+					<option ${exeperience7} value="7">более 14</option>
 				</select>
 			</div>
 			<div class="item">
 				<label for="cm">Мощность (л.с.): </label>
     			<select id="cm" name="cm">
-					<option value="0">До 50</option>
-					<option value="1">От 51 до 70</option>
-					<option value="2">От 71 до 100</option>
-					<option value="3">От 101 до 120</option>
-					<option value="4">От 121 до 150</option>
-					<option value="5">От 151</option>
+					<option ${cm0} value="0">До 50</option>
+					<option ${cm1} value="1">От 51 до 70</option>
+					<option ${cm2} value="2">От 71 до 100</option>
+					<option ${cm3} value="3">От 101 до 120</option>
+					<option ${cm4} value="4">От 121 до 150</option>
+					<option ${cm5} value="5">От 151</option>
 				</select>
 			</div>
 			<div class="item">
 				<label for="pricep">Наличие прицепа: </label>
-    			<input type="radio" name="pricep" value="1">Да (промокод не учитывается)
-    			<input checked type="radio" name="pricep" value="-1">Нет
+    			<input type="radio" name="pricep" ${pricep1} value="1">Да (промокод не учитывается)
+    			<input type="radio" name="pricep" ${pricep0} value="-1">Нет
 			</div>
 			<div class="item">
 				<label for="promo">Промокод: </label>
