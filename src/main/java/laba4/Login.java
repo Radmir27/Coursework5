@@ -15,23 +15,26 @@ public class Login extends HttpServlet {
      * 
      */
     private static final long serialVersionUID = 1L;
+    
+    static boolean prov1;
+    static boolean prov2;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestLogin auth = RequestLogin.fromRequestParameters(request);
-        boolean prov = auth.Proverka(request);
+        auth.Proverka(request);
 
-        if (prov) {
+        if (prov1) {
             request.getRequestDispatcher("/admpanel.jsp").forward(request, response);
+        } else if (prov2) {
+            request.getRequestDispatcher("/Form.jsp").forward(request, response);
         } else {
-            request.getRequestDispatcher("/Authorization.jsp").forward(request, response);
+        	request.getRequestDispatcher("/Authorization.jsp").forward(request, response);
         }
     }
 
     private static class RequestLogin {
         private final String login;
         private final String pass;
-
-        private float result;
 
         private RequestLogin (String login, String pass) {
             this.login = login;
@@ -44,7 +47,8 @@ public class Login extends HttpServlet {
             request.getParameter("pass")
                     );
             }
-        public boolean Proverka(HttpServletRequest request) throws IOException {
+        
+        public void Proverka(HttpServletRequest request) throws IOException {
 
             String login_try;
             String pass_try;
@@ -53,7 +57,8 @@ public class Login extends HttpServlet {
             pass_try = pass;
 
             Check check = new Check();
-            return check.check(login_try, pass_try);
+            prov1 = check.check1(login_try, pass_try);
+            prov2 = check.check2(login_try, pass_try);
         }
     }
 }

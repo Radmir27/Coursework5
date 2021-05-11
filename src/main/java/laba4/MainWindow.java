@@ -65,9 +65,10 @@ public class MainWindow extends HttpServlet {
 			request.setAttribute("age", age);
 			request.setAttribute("experience", experience);
 			request.setAttribute("cm", cm);
-			request.setAttribute("pricep", pricep);
+			request.setAttribute("pricep", pricep);*/
+			
 			request.setAttribute("promo", promo);
-			*/
+			
 			int category_try;
 			int city_try;
 			int cbm_try;
