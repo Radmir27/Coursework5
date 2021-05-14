@@ -41,7 +41,7 @@ public class Check implements parametrs {
     }
 
     public void setParam() throws IOException {
-    	File file1 = new File("sr/main/webapp/conf/AdminLogPass.txt");
+    	File file1 = new File("srñ/main/webapp/conf/AdminLogPass.txt");
         FileReader fr1 = new FileReader(file1);
         BufferedReader reader1 = new BufferedReader(fr1);
         String line;
