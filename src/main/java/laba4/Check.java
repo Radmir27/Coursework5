@@ -53,7 +53,7 @@ public class Check implements parametrs {
         }
         reader1.close();
         
-        File file2 = new File("src\\main\\webapp\\conf\\UserLogPass.txt");
+        File file2 = new File("src/main/webapp/conf/UserLogPass.txt");
         FileReader fr2 = new FileReader(file2);
         BufferedReader reader2 = new BufferedReader(fr2);
         while((line = reader2.readLine()) != null) {
