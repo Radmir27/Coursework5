@@ -23,7 +23,7 @@ public class Coef implements parametrs {
 		csvsCoef = new float[7][8];
 		cmCoef = new float[6];
 		cprCoef = new float[12];
-		File file = new File("config.txt");
+		File file = new File("src\\main\\webapp\\conf\\config.txt");
         //создаем объект FileReader для объекта File
         FileReader fr = new FileReader(file);
         //создаем BufferedReader с существующего FileReader для построчного считывания
