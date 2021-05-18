@@ -84,12 +84,12 @@ public class MainWindow extends HttpServlet {
 				//переход на метод или класс с прицепом
 				OSAGOwithTrailer osago = new OSAGOwithTrailer();
 				result = osago.calculation(category_try, city_try, cbm_try, age_try, experience_try, cm_try, promo_try);
-				request.setAttribute("result", result);
+				request.setAttribute("result", result+" руб.");
 			} else if (pricep_try == -1) {
 				//переход на метод или класс с промокодом
 				OSAGOwithPromo osago = new OSAGOwithPromo();
 				result = osago.calculation(category_try, city_try, cbm_try, age_try, experience_try, cm_try, promo_try);
-				request.setAttribute("result", result);
+				request.setAttribute("result", result+" руб.");
 			}
 			
 			for (int i = 0; i < 12; i++) {
