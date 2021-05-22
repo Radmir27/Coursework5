@@ -52,7 +52,7 @@
 			</div>
 			<div class="item">
 				<label for="cbm">КБМ водителя: </label>
-    			<select id="cbm" name="cbm">
+    			<select ${cbm} id="cbm" name="cbm">
 					<option ${cbm0} value="0">M</option>
 					<option ${cbm1} value="1">0</option>
 					<option ${cbm2} value="2">1</option>
@@ -85,7 +85,7 @@
 			</div>
 			<div class="item">
  				<label for="experience">Стаж (лет): </label>
-    			<select id="experience" name="experience">
+    			<select onchange="refreshJournal()" id="experience" name="experience">
 					<option ${experience0} value="0">0</option>
 					<option ${experience1} value="1">1</option>
 					<option ${experience2} value="2">2</option>
@@ -127,6 +127,22 @@
             </div>
             <button onclick="generate()">Выгрузить PDF</button>
             
+            <script>
+            function refreshJournal() {
+              var e = document.getElementById("experience");
+          	  var exp = e.options[e.selectedIndex].value;
+          	  if (exp === '0') {
+          		document.querySelector("#cbm").value = "4";
+          		if (!expanded) {
+                    checkboxes.style.display = "block";
+                    expanded = true;
+                } else {
+                    checkboxes.style.display = "none";
+                    expanded = false;
+                }
+          	  }
+            }
+            </script>
             
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
@@ -358,10 +374,10 @@
                 ['CBM', cbm],
                 ['Age', age + " years"],
                 ['Experience', experience + " years"],
-                ['Power', cm + "horsepower"],
+                ['Power', cm + " horsepower"],
                 ['Trailer', pricep],
                 ['Promo', promo],
-                ['Result', price + "rubles"],
+                ['Result', price + " rubles"],
                 ],
               )
 		doc.save("OSAGO.pdf");

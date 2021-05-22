@@ -19,6 +19,7 @@
             <input type="submit" name="sign" value="Вход">
         </div>
     </form>
+
 </div>
 </body>
 </html>

@@ -26,6 +26,8 @@ public class Login extends HttpServlet {
         if (prov1) {
             request.getRequestDispatcher("/admpanel.jsp").forward(request, response);
         } else if (prov2) {
+        	request.setAttribute("cbm" , "disabled");
+        	request.setAttribute("cbm4" , "selected");
             request.getRequestDispatcher("/Form.jsp").forward(request, response);
         } else {
         	request.getRequestDispatcher("/index.jsp").forward(request, response);
