@@ -24,7 +24,7 @@ public class Coef implements parametrs {
 		cmCoef = new float[6];
 		cprCoef = new float[12];
 		
-		String filepath = new File("").getCanonicalPath();
+		/*String filepath = new File("").getCanonicalPath();
  		String[] parsfilepath = filepath.split("/");
  		int lengthpath = parsfilepath.length;
  		String abspath=""; 
@@ -32,7 +32,8 @@ public class Coef implements parametrs {
  			abspath=abspath+parsfilepath[i]+"/";
  		}
  		filepath=abspath+"/conf/config.txt";
- 		File file = new File(filepath);
+ 		File file = new File(filepath);*/
+		File file = new File("src/main/webapp/cconf/config.txt");
         //создаем объект FileReader для объекта File
         FileReader fr = new FileReader(file);
         //создаем BufferedReader с существующего FileReader для построчного считывания

@@ -41,15 +41,16 @@ public class Check implements parametrs {
     }
 
     public void setParam() throws IOException {
-    	String filepath = new File("").getCanonicalPath();
- 		String[] parsfilepath = filepath.split("/");
+    	/*String filepath = new File("").getCanonicalPath();
+ 		String[] parsfilepath = filepath.split("\\");
  		int lengthpath = parsfilepath.length;
  		String abspath=""; 
  		for(int i=0;i<(lengthpath-1);i++) {
- 			abspath=abspath+parsfilepath[i]+"/";
+ 			abspath=abspath+parsfilepath[i]+"\\";
  		}
- 		filepath=abspath+"/conf/AdminLogPass.txt";
- 		File file1 = new File(filepath);
+ 		filepath=abspath+"webapps\\conf\\AdminLogPass.txt";
+ 		File file1 = new File(filepath);*/
+    	File file1 = new File("src/main/webapp/conf/AdminLogPass.txt");
         FileReader fr1 = new FileReader(file1);
         BufferedReader reader1 = new BufferedReader(fr1);
         String line;
@@ -61,8 +62,9 @@ public class Check implements parametrs {
         }
         reader1.close();
         
- 		filepath=abspath+"/conf/UserLogPass.txt";
- 		File file2 = new File(filepath);
+ 		/*filepath=abspath+"webapps\\conf\\UserLogPass.txt";
+ 		File file2 = new File(filepath);*/
+        File file2 = new File("src/main/webapp/conf/UserLogPass.txt");
         FileReader fr2 = new FileReader(file2);
         BufferedReader reader2 = new BufferedReader(fr2);
         while((line = reader2.readLine()) != null) {

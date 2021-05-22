@@ -48,8 +48,8 @@
               	<a href="/" class="logo">PI221GR5</a>
                 <nav>
                   <ul>
-                    <li><a href="/authors.jsp">О нас</a></li>
-                    <li><a href="/Form.jsp">Калькулятор</a></li>
+                    <li><a href="${pageContext.request.contextPath}/authors.jsp">О нас</a></li>
+                    <li><a href="${pageContext.request.contextPath}/Form.jsp">Калькулятор</a></li>
                   </ul>
                 </nav>
               </div>

@@ -76,16 +76,16 @@
               	<a href="/" class="logo">PI221GR5</a>
                 <nav>
                   <ul>
-                    <li><a href="/Authorization.jsp">Вход</a></li>
-                    <li><a href="/authors.jsp">О нас</a></li>
-                    <li><a href="/osagos.pdf" download>Выгрузить PDF</a></li>
+                    <li><a href="${pageContext.request.contextPath}/Authorization.jsp">Вход</a></li>
+                    <li><a href="${pageContext.request.contextPath}/authors.jsp">О нас</a></li>
+                    <li><a href="${pageContext.request.contextPath}/osagos.pdf" download>Выгрузить PDF</a></li>
                   </ul>
                 </nav>
               </div>
             </header>
            <div class="title"><h1>Калькулятор расчета ОСАГО</h1></div>
            <div class="form">
-           <form action="/JavaCalc" method="post">
+           <form action="${pageContext.request.contextPath}/JavaCalc" method="post">
 			<div class="item">
     			<label for="category">Категория:</label>
     			<select id="category" name="category">

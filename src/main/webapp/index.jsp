@@ -29,7 +29,7 @@
     <!--STYLE_END-->
     <div class="title"><h1>АВТОРИЗАЦИЯ</h1></div> 
     <div class="form">
-    <form action="/JavaLogin" method="post">
+    <form action="${pageContext.request.contextPath}/JavaLogin" method="post">
         <div class="item">
             <label for="login">Логин:</label>
             <input type="text" name="login" id="login" value="${login}">
