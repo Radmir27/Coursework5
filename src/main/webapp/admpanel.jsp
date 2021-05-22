@@ -17,7 +17,7 @@
                   </ul>
                 </nav>
               </div>
-  				<div id="adm" class="form">
+  				<div id="auth" class="form">
 	  				<label for="color">Смена Цвета</label>
 	    			<select id="color" name="color">
 						<option ${category0} value="#D6912F">orange</option>
