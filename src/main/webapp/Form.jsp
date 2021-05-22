@@ -131,16 +131,13 @@
             function refreshJournal() {
               var e = document.getElementById("experience");
           	  var exp = e.options[e.selectedIndex].value;
+              e = document.getElementById("cbm");
           	  if (exp === '0') {
           		document.querySelector("#cbm").value = "4";
-          		if (!expanded) {
-                    checkboxes.style.display = "block";
-                    expanded = true;
-                } else {
-                    checkboxes.style.display = "none";
-                    expanded = false;
-                }
-          	  }
+                e.disabled = true;
+          	  } else {
+              e.disabled = false;
+              }
             }
             </script>
             
