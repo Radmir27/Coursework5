@@ -186,6 +186,51 @@
 			<div class="item">
             	<input type="submit" name="sign" value="Расчитать">
             </div>
+            <button onclick="generate()">Выгрузить PDF PDF</button>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.5/jspdf.plugin.autotable.js"></script>
+
+<script>
+ function generate() {
+      var doc = new jsPDF('p', 'pt');	//
+      doc.setFont('Courier');	//фон
+        
+        /*doc.autoTable(["Parameters", "Choice"]}, ["Category", "City", "CBM", 
+        	"Age", "Experience", "Power", "Pricep", "Promocode", "Summ"], {	// создание таблицы
+        bodyStyles: {rowHeight: 30},
+        drawCell: function(cell, opts) {
+          if (opts.column.dataKey === 10) {
+            images.push({
+              url: imgElements[i].src,
+              x: "hello",
+              y: "world"
+            });
+            i++;
+          }
+        },
+
+      doc.autoTable({
+          //html: '#my-table',
+          //theme: 'grid',
+          //tableWidth: 180,
+          head: [['Parameters', 'Choice']],
+          body: [
+          ['Category', 'Donna'],
+          ['City', 'Janice'],
+          ['CBM','Ruth'],
+          ['Age', 'Jason'],
+          ['Experience', 'Jane'],
+          ['Power', 'Adam'],
+          ['Pricep', 'Adam'],
+          ['Promocode', 'Adam'],
+          ['Summ', 'Adam'],
+          ],
+        })
+      doc.save("OSAGOS.pdf");
+    }
+</script>
+            
            </form>
        </div>
         
