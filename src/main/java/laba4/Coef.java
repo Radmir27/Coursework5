@@ -33,7 +33,7 @@ public class Coef implements parametrs {
  		}
  		filepath=abspath+"/conf/config.txt";
  		File file = new File(filepath);*/
-		File file = new File("src/main/webapp/cconf/config.txt");
+		File file = new File("src/main/webapp/conf/config.txt");
         //создаем объект FileReader для объекта File
         FileReader fr = new FileReader(file);
         //создаем BufferedReader с существующего FileReader для построчного считывания
