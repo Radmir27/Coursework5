@@ -149,6 +149,10 @@
         	    	e.disabled = true;
         	    } else {
         	    	e.disabled = false;
+        	    	e = document.getElementById("category").value;
+        	    	if (e === "4" || e === "5") {
+        	    		document.querySelector("#category").value = "0";
+        	    	}
         	    }
             }
             </script>
