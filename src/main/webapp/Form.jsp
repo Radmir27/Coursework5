@@ -186,7 +186,10 @@
 			<div class="item">
             	<input type="submit" name="sign" value="Расчитать">
             </div>
-            <button onclick="generate()">Выгрузить PDF PDF</button>
+            <button onclick="generate()">Выгрузить PDF</button>
+            </form>
+            
+            </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.5/jspdf.plugin.autotable.js"></script>
@@ -230,9 +233,6 @@
       doc.save("OSAGOS.pdf");
     }
 </script>
-            
-           </form>
-       </div>
         
         
 	</body>
