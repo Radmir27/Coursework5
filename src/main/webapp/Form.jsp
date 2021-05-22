@@ -121,7 +121,7 @@
 				<input readonly type="text" name="price" id="price" value="${result}">
 			</div>
 			<div class="item">
-            	<input type="submit" name="sign" value="Расчитать">
+            	<input onclick="ref4() type="submit" name="sign" value="Расчитать">
             </div>
             </form>
             </div>
@@ -165,6 +165,13 @@
             	  if (category === '4' || category === '5') {
             		  document.querySelector('input[value="1"]').checked = true;
             	  }
+            }
+            </script>
+            
+            <script>
+            function ref4() {
+            	document.getElementById("cbm").disabled = false;
+            	document.getElementById("promo").disabled = false;
             }
             </script>
             
