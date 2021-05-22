@@ -398,26 +398,20 @@
 	        break;
 	    }
 	  
-	  e = document.getElementById("pricep");
-	  var pricep = e.options[e.selectedIndex].value;
-	  
+	  var pricep = document.querySelector('input[name="pricep"]:checked').value;
 	    switch(pricep){
-          case "0" :
-            cm = "Yes";
-            break;
           case "1" :
-            cm = "No";
+            pricep = "Yes";
+            break;
+          case "-1" :
+            pricep = "No";
             break;
 	    }
 	  
-	  e = document.getElementById("promo");
-	  var promo = e.options[e.selectedIndex].text;
+	  var promo = document.getElementById("promo").value;
 	  
-	  e = document.getElementById("price");
-	  var prise = e.options[e.selectedIndex].text;
+	  var prise = document.getElementById("prise").value;
 	  
-	  
-
         doc.autoTable(
                 ['Parameter names', 'Selected parameters'],
                 [
@@ -428,8 +422,8 @@
                 ['Experience', experience],
                 ['Power', cm],
                 ['Pricep', pricep],
-                ['Promocode', promo],
-                ['Summ', prise],
+                ['Promo', promo],
+                ['Result', prise],
                 ],
               )
 		doc.save("OSAGO.pdf");
