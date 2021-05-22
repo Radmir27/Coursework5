@@ -180,7 +180,7 @@
     			<input type="text" name="promo" id="promo" value="${promo}">
 			</div>
 			<div class="item">
-				<label for="price">Стоимость: </label>
+				<label for="price">Стоимость (руб.): </label>
 				<input readonly type="text" name="price" id="price" value="${result}">
 			</div>
 			<div class="item">
