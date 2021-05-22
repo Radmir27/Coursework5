@@ -36,7 +36,6 @@
 	  var body=document.getElementsByTagName('body')[0];
 	  button.onchange=function(){
 	  body.style.backgroundColor=button.value;
-	  body.style.backgroundColor=#234323;
 	  };
   };
   </script>
