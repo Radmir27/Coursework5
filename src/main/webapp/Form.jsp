@@ -121,7 +121,7 @@
 				<input readonly type="text" name="price" id="price" value="${result}">
 			</div>
 			<div class="item">
-            	<input onclick="ref4() type="submit" name="sign" value="Расчитать">
+            	<input onclick="ref4()" type="submit" name="sign" value="Расчитать">
             </div>
             </form>
             </div>
