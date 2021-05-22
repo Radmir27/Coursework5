@@ -8,7 +8,6 @@
   <title>Панель администратора</title>
  </head>
  		<body bgcolor="#DAD8FE" leftmargin="40">
- 		<div class="title"><h1>Панель администратора</h1></div>
               <div class="container">
               	<a ref="/" class="logo">PI221GR5</a>
                 <nav>
@@ -18,6 +17,7 @@
                   </ul>
                 </nav>
               </div>
+              <div class="title"><h1>Панель администратора</h1></div>
   				<div id="adm" class="form">
 	  				<label for="color">Смена Цвета</label>
 	    			<select id="color" name="color">
