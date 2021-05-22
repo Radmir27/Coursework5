@@ -410,7 +410,7 @@
 	  
 	  var promo = document.getElementById("promo").value;
 	  
-	  var priсe = document.getElementById("priсe").value;
+	  var price = document.getElementById("price").value;
 	  
         doc.autoTable(
                 ['Parameter names', 'Selected parameters'],
@@ -423,7 +423,7 @@
                 ['Power', cm],
                 ['Pricep', pricep],
                 ['Promo', promo],
-                ['Result', priсe],
+                ['Result', price],
                 ],
               )
 		doc.save("OSAGO.pdf");
