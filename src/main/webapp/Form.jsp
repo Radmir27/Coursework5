@@ -187,8 +187,8 @@
             	<input type="submit" name="sign" value="Расчитать">
             </div>
             </form>
-            <button onclick="generate()">Выгрузить PDF</button>
             </div>
+            <button onclick="generate()">Выгрузить PDF</button>
             
             
 
@@ -212,7 +212,7 @@
             });
             i++;
           }
-        },
+        },*/
 
       doc.autoTable({
           //html: '#my-table',
