@@ -78,7 +78,6 @@
                   <ul>
                     <li><a href="${pageContext.request.contextPath}/Authorization.jsp">Вход</a></li>
                     <li><a href="${pageContext.request.contextPath}/authors.jsp">О нас</a></li>
-                    <li><a href="${pageContext.request.contextPath}/osagos.pdf" download>Выгрузить PDF</a></li>
                   </ul>
                 </nav>
               </div>
@@ -197,44 +196,31 @@
 
 <script>
  function generate() {
-      var doc = new jsPDF('p', 'pt');	//
-      doc.setFont('Courier');	//фон
-        
-        /*doc.autoTable(["Parameters", "Choice"]}, ["Category", "City", "CBM", 
-        	"Age", "Experience", "Power", "Pricep", "Promocode", "Summ"], {	// создание таблицы
-        bodyStyles: {rowHeight: 30},
-        drawCell: function(cell, opts) {
-          if (opts.column.dataKey === 10) {
-            images.push({
-              url: imgElements[i].src,
-              x: "hello",
-              y: "world"
-            });
-            i++;
-          }
-        },*/
+      var doc = new jsPDF('p', 'pt');
+      doc.setFont('Courier');
+      var e;
+      //doc.text(0, 10, 'hello');
+      
+      e = document.getElementById("category");
+	  var category = e.options[e.selectedIndex].value;
 
-      doc.autoTable({
-          //html: '#my-table',
-          //theme: 'grid',
-          //tableWidth: 180,
-          head: [['Parameters', 'Choice']],
-          body: [
-          ['Category', 'Donna'],
-          ['City', 'Janice'],
-          ['CBM','Ruth'],
-          ['Age', 'Jason'],
-          ['Experience', 'Jane'],
-          ['Power', 'Adam'],
-          ['Pricep', 'Adam'],
-          ['Promocode', 'Adam'],
-          ['Summ', 'Adam'],
-          ],
-        })
-      doc.save("OSAGOS.pdf");
+        doc.autoTable(
+                ['Parameters', 'Choice'],
+                [
+                ['Category', category],
+                ['City', 'Janice'],
+                ['CBM','Ruth'],
+                ['Age', 'Jason'],
+                ['Experience', 'Jane'],
+                ['Power', 'Adam'],
+                ['Pricep', 'Adam'],
+                ['Promocode', 'Adam'],
+                ['Summ', 'Adam'],
+                ],
+              )
+		doc.save("OSAGO.pdf");
     }
 </script>
-        
         
 	</body>
 
