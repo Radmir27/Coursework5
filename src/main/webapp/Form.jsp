@@ -14,14 +14,14 @@
               	<a href="/" class="logo">PI221GR5</a>
                 <nav>
                   <ul>
-                    <li><a href="${pageContext.request.contextPath}/Login.java">Вход</a></li>
+                    <li><a href="${pageContext.request.contextPath}/index.jsp">Вход</a></li>
                     <li><a href="${pageContext.request.contextPath}/authors.jsp">О нас</a></li>
                   </ul>
                 </nav>
               </div>
             </header>
            <div class="title"><h1>Калькулятор расчета ОСАГО</h1></div>
-           <div class="form">
+           <div id="calc" class="form">
            <form action="${pageContext.request.contextPath}/JavaCalc" method="post">
 			<div class="item">
     			<label for="category">Категория:</label>

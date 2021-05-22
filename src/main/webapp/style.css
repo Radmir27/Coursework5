@@ -29,7 +29,7 @@ select {
     border-radius: 33px;
     padding:25px;
 }
-.item input {
+#calc .item input {
   width: 40%;
 }
 
@@ -68,6 +68,10 @@ nav li {
   max-width: 1024px;
   padding: 15px;
   margin: 0 auto;
+}
+#adm {
+	display:flex;
+	flex-direction:row;
 }
 nav a {
 	text-decoration: none;
