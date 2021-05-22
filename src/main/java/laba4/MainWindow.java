@@ -127,6 +127,10 @@ public class MainWindow extends HttpServlet {
 			for (int i = 0; i < 8; i++) {
 				if (i == experience_try) {
 					request.setAttribute("experience" + i, "selected");
+					if (i == 1) {
+						request.setAttribute("cbm" , "disabled");
+			        	request.setAttribute("cbm4" , "selected");
+					}
 				} else {
 					request.setAttribute("experience" + i, "");
 				}
@@ -143,6 +147,7 @@ public class MainWindow extends HttpServlet {
 			if (1 == pricep_try) {
 				request.setAttribute("pricep1", "checked");
 				request.setAttribute("pricep0", "");
+				request.setAttribute("promoog" , "disabled");
 			} else {
 				request.setAttribute("pricep1", "");
 				request.setAttribute("pricep0", "checked");

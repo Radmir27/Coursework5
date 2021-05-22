@@ -114,7 +114,7 @@
 			</div>
 			<div class="item">
 				<label for="promo">Промокод: </label>
-    			<input type="text" name="promo" id="promo" value="${promo}">
+    			<input type="text" name="promo" id="promo" ${promoog} value="${promo}">
 			</div>
 			<div class="item">
 				<label for="price">Стоимость (руб.): </label>
