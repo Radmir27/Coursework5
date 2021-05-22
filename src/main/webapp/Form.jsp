@@ -125,7 +125,7 @@
             </div>
             </form>
             </div>
-            <button onclick="generate()">Выгрузить PDF</button>
+            <center><button onclick="generate()">Выгрузить PDF</button></center>
             
             <script>
             function ref1() {
