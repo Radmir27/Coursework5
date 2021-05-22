@@ -420,10 +420,10 @@
                 ['CBM', cbm],
                 ['Age', age + " years"],
                 ['Experience', experience + " years"],
-                ['Power', cm + "horsepower"],
+                ['Power', cm + " horsepower"],
                 ['Trailer', pricep],
                 ['Promo', promo],
-                ['Result', price + "rubles"],
+                ['Result', price + " rubles"],
                 ],
               )
 		doc.save("OSAGO.pdf");
