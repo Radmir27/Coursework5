@@ -25,7 +25,7 @@
            <form action="${pageContext.request.contextPath}/JavaCalc" method="post">
 			<div class="item">
     			<label for="category">Категория:</label>
-    			<select id="category" name="category">
+    			<select onchange="ref3()" id="category" name="category">
 					<option ${category0} value="0">А, М Мотоциклы, мопеды и легкие квадрициклы</option>
 					<option ${category1} value="1">B, BE физических лиц, индивидуальных предпринимателей</option>
 					<option ${category2} value="2">В, ВЕ юридических лиц</option>
@@ -136,7 +136,7 @@
           		document.querySelector("#cbm").value = "4";
                 e.disabled = true;
           	  } else {
-              e.disabled = false;
+                e.disabled = false;
               }
             }
             </script>
@@ -145,12 +145,22 @@
             function ref2() {
             	var pricep = document.querySelector('input[name="pricep"]:checked').value;
             	var e = document.getElementById("promo");
-                alert('hello');
         	    if (pricep === '1') {
         	    	e.disabled = true;
         	    } else {
         	    	e.disabled = false;
         	    }
+            }
+            </script>
+            
+            <script>
+            function ref3() {
+            	var e = document.getElementById("category");
+            	var category = e.options[e.selectedIndex].value;
+                e = document.getElementById("pricep");
+            	  if (category === '4' || category === '5') {
+            		  document.querySelector('input[value="1"]').checked = true;
+            	  }
             }
             </script>
             
