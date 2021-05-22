@@ -85,7 +85,7 @@
 			</div>
 			<div class="item">
  				<label for="experience">Стаж (лет): </label>
-    			<select onchange="refreshJournal()" id="experience" name="experience">
+    			<select onchange="ref1()" id="experience" name="experience">
 					<option ${experience0} value="0">0</option>
 					<option ${experience1} value="1">1</option>
 					<option ${experience2} value="2">2</option>
@@ -109,8 +109,8 @@
 			</div>
 			<div class="item">
 				<label for="pricep">Наличие прицепа: </label>
-    			<input type="radio" name="pricep" ${pricep1} required value="1">Да (промокод не учитывается)
-    			<input type="radio" name="pricep" ${pricep0} value="-1">Нет
+    			<input onchange="ref2()" type="radio" name="pricep" ${pricep1} required value="1">Да (промокод не учитывается)
+    			<input onchange="ref2()" type="radio" name="pricep" ${pricep0} value="-1">Нет
 			</div>
 			<div class="item">
 				<label for="promo">Промокод: </label>
@@ -128,7 +128,7 @@
             <button onclick="generate()">Выгрузить PDF</button>
             
             <script>
-            function refreshJournal() {
+            function ref1() {
               var e = document.getElementById("experience");
           	  var exp = e.options[e.selectedIndex].value;
               e = document.getElementById("cbm");
@@ -138,6 +138,19 @@
           	  } else {
               e.disabled = false;
               }
+            }
+            </script>
+            
+            <script>
+            function ref2() {
+            	var pricep = document.querySelector('input[name="pricep"]:checked').value;
+            	var e = document.getElementById("promo");
+                alert('hello');
+        	    if (pricep === '1') {
+        	    	e.disabled = true;
+        	    } else {
+        	    	e.disabled = false;
+        	    }
             }
             </script>
             
