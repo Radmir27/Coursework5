@@ -204,209 +204,209 @@
       e = document.getElementById("category");
 	  var category = e.options[e.selectedIndex].value;
 	  
-	    switch(e){
-	      case 0 :
-	    	  var category = "A, M Motorcycles, mopeds and light quads";
+	    switch(category){
+	      case "0" :
+	    	  category = "A, M Motorcycles, mopeds and light quads";
 	    	  break;
-	      case 1 :
-	    	  var category = "B, BE individuals, sole proprietors";
+	      case "1" :
+	    	  category = "B, BE individuals, sole proprietors";
 	    	  break;
-	      case 2 :
-	    	  var category = "B, BE legal entities";
+	      case "2" :
+	    	  category = "B, BE legal entities";
 	    	  break;
-	      case 3 :
-	    	  var category = "B, BE used as a cab";
+	      case "3" :
+	    	  category = "B, BE used as a cab";
 	    	  break;
-	      case 4 :
-	    	  var category = "C, CE with permissible maximum weight of 16 tons or less";
+	      case "4" :
+	    	  category = "C, CE with permissible maximum weight of 16 tons or less";
 	    	  break;
-	      case 5 :
-	    	  var category = "C, CE with a permissible maximum mass exceeding 16 tonnes";
+	      case "5" :
+	    	  category = "C, CE with a permissible maximum mass exceeding 16 tonnes";
 	    	  break;
-	      case 6 :
-	    	  var category = "D, DE with up to and including 16 passenger seats";
+	      case "6" :
+	    	  category = "D, DE with up to and including 16 passenger seats";
 	    	  break;
-	      case 7 :
-	    	  var category = "D, DE with more than 16 passenger seats";
+	      case "7" :
+	    	  category = "D, DE with more than 16 passenger seats";
 	    	  break;
-	      case 8 :
-	    	  var category = "D, DE used on scheduled transport services";
+	      case "8" :
+	    	  category = "D, DE used on scheduled transport services";
 	    	  break;
-	      case 9 :
-	    	  var category = "Tb Trolleybuses";
+	      case "9" :
+	    	  category = "Tb Trolleybuses";
 	    	  break;
-	      case 10 :
-	    	  var category = "Tm Trams";
+	      case "10" :
+	    	  category = "Tm Trams";
 	    	  break;
-	      case 11 :
-	    	  var category = "Tractors, self-propelled road-building and other machines";
+	      case "11" :
+	    	  category = "Tractors, self-propelled road-building and other machines";
 	    	  break;
 	     }
 	  
 	  e = document.getElementById("city");
 	  var city = e.options[e.selectedIndex].value;
 	  
-	    switch(e){
-          case 0 :
-    	    var city = "Ufa ";
+	    switch(city){
+          case "0" :
+    	    city = "Ufa";
     	    break;
-          case 1 :
-    	    var city = "Voronezh";
+          case "1" :
+    	    city = "Voronezh";
     	    break;
-          case 2 :
-    	    var city = "Omsk";
+          case "2" :
+    	    city = "Omsk";
     	    break;
-          case 3 :
-    	    var city = "Chelyabinsk";
+          case "3" :
+    	    city = "Chelyabinsk";
     	    break;
-          case 4 :
-    	    var city= "Moscow";
+          case "4" :
+    	    city= "Moscow";
     	    break;
     	  }
 	  
 	  e = document.getElementById("cbm");
 	  var cbm = e.options[e.selectedIndex].value;
 	  
-	    switch(e){
-          case 0 :
-    	    var cbm = "M";
+	    switch(cbm){
+          case "0" :
+    	    cbm = "M";
     	    break;
-          case 1 :
-    	    var cbm = "0";
+          case "1" :
+    	    cbm = "0";
     	    break;
-          case 2 :
-    	    var cbm = "1";
+          case "2" :
+    	    cbm = "1";
     	    break;
-          case 3 :
-    	    var cbm = "2";
+          case "3" :
+    	    cbm = "2";
     	    break;
-          case 4 :
-      	    var cbm = "3";
+          case "4" :
+      	    cbm = "3";
             break;
-          case 5 :
-    	    var cbm = "4";
+          case "5" :
+    	    cbm = "4";
     	    break;
-          case 6 :
-    	    var cbm = "5";
+          case "6" :
+    	    cbm = "5";
     	    break;
-          case 7 :
-    	    var cbm = "6";
+          case "7" :
+    	    cbm = "6";
     	    break;
-         case 8 :
-    	    var cbm = "7";
+          case "8" :
+    	    cbm = "7";
     	    break;
-          case 9 :
-    	    var cbm = "8";
+          case "9" :
+    	    cbm = "8";
     	    break;
-          case 10 :
-       	    var cbm = "9";
+          case "10" :
+       	    cbm = "9";
             break;
-          case 11 :
-    	    var cbm = "10";
+          case "11" :
+    	    cbm = "10";
     	    break;
-          case 12 :
-    	    var cbm = "11";
+          case "12" :
+    	    cbm = "11";
     	    break;
-          case 13 :
-    	    var cbm = "12";
+          case "13" :
+    	    cbm = "12";
     	    break;
-          case 14 :
-    	    var cbm = "13";
+          case "14" :
+    	    cbm = "13";
     	    break;
 	      }
 	  
 	  e = document.getElementById("age");
 	  var age = e.options[e.selectedIndex].value;
 	  
-	    switch(e){
-          case 0 :
-    	    var age = "16 - 21";
+	    switch(age){
+          case "0" :
+    	    age = "16 - 21";
     	    break;
-          case 1 :
-    	    var age = "22 - 24";
+          case "1" :
+    	    age = "22 - 24";
     	    break;
-          case 2 :
-    	    var age = "25 - 29";
+          case "2" :
+    	    age = "25 - 29";
     	    break;
-          case 3 :
-    	    var age = "30 - 34";
+          case "3" :
+    	    age = "30 - 34";
     	    break;
-          case 4 :
-    	    var age = "35 - 39";
+          case "4" :
+    	    age = "35 - 39";
     	    break;
-          case 5 :
-    	    var age = "40 - 49";
+          case "5" :
+    	    age = "40 - 49";
     	    break;
-          case 6 :
-    	    var age = "50 - 59";
+          case "6" :
+    	    age = "50 - 59";
     	    break;
-         case 7 :
-    	    var age = "over 59";
+          case "7" :
+    	    age = "over 59";
     	    break;
 	     }
 	  
 	  e = document.getElementById("experience");
 	  var experience = e.options[e.selectedIndex].value;
 	  
-	    switch(e){
-          case 0 :
-  	        var experience = "0";
+	    switch(experience){
+          case "0" :
+  	        experience = "0";
   	        break;
-          case 1 :
-  	        var experience = "1";
+          case "1" :
+  	        experience = "1";
   	        break;
-          case 2 :
-  	        var experience = "2";
+          case "2" :
+  	        experience = "2";
   	        break;
-          case 3 :
-  	        var experience = "3 - 4";
+          case "3" :
+  	        experience = "3 - 4";
   	        break;
-          case 4 :
-  	        var experience = "5 - 6";
+          case "4" :
+  	        experience = "5 - 6";
   	        break;
-          case 5 :
-  	        var experience = "7 - 9";
+          case "5" :
+  	        experience = "7 - 9";
   	        break;
-          case 6 :
-  	        var experience = "10 - 14";
+          case "6" :
+  	        experience = "10 - 14";
   	        break;
-          case 7 :
-  	        var experience = "over 14";
+          case "7" :
+  	        experience = "over 14";
   	        break;
 	      }
 	  e = document.getElementById("cm");
 	  var cm = e.options[e.selectedIndex].value;
 	  
-	    switch(e){
-          case 0 :
-	        var cm = "from 50";
+	    switch(cm){
+          case "0" :
+	        cm = "from 50";
 	        break;
-          case 1 :
-	        var cm = "51 to 70";
+          case "1" :
+	        cm = "51 to 70";
 	        break;
-          case 2 :
-	        var cm = "71 to 100";
+          case "2" :
+	        cm = "71 to 100";
 	        break;
-          case 3 :
-	        var cm = "101 to 120";
+          case "3" :
+	        cm = "101 to 120";
 	        break;
-          case 4 :
-	        var cm = "121 to 150";
+          case "4" :
+	        cm = "121 to 150";
 	        break;
-          case 5 :
-	        var cm = "up to 151";
+          case "5" :
+	        cm = "up to 151";
 	        break;
 	    }
 	  
-	  e = document.getElementById("pricep);
+	  e = document.getElementById("pricep");
 	  var pricep = e.options[e.selectedIndex].value;
 	  
-	    switch(e){
-          case 0 :
-            var cm = "Yes";
+	    switch(pricep){
+          case "0" :
+            cm = "Yes";
             break;
-          case 1 :
-            ar cm = "No";
+          case "1" :
+            cm = "No";
             break;
 	    }
 	  
