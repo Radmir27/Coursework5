@@ -418,12 +418,12 @@
                 ['Category', category],
                 ['City', city],
                 ['CBM', cbm],
-                ['Age', age],
-                ['Experience', experience],
-                ['Power', cm],
-                ['Pricep', pricep],
+                ['Age', age + " years"],
+                ['Experience', experience + " years"],
+                ['Power', cm + "horsepower"],
+                ['Trailer', pricep],
                 ['Promo', promo],
-                ['Result', price],
+                ['Result', price + "rubles"],
                 ],
               )
 		doc.save("OSAGO.pdf");
