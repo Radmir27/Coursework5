@@ -203,19 +203,233 @@
       
       e = document.getElementById("category");
 	  var category = e.options[e.selectedIndex].value;
+	  
+	    switch(e){
+	      case 0 :
+	    	  var category = "A, M Motorcycles, mopeds and light quads";
+	    	  break;
+	      case 1 :
+	    	  var category = "B, BE individuals, sole proprietors";
+	    	  break;
+	      case 2 :
+	    	  var category = "B, BE legal entities";
+	    	  break;
+	      case 3 :
+	    	  var category = "B, BE used as a cab";
+	    	  break;
+	      case 4 :
+	    	  var category = "C, CE with permissible maximum weight of 16 tons or less";
+	    	  break;
+	      case 5 :
+	    	  var category = "C, CE with a permissible maximum mass exceeding 16 tonnes";
+	    	  break;
+	      case 6 :
+	    	  var category = "D, DE with up to and including 16 passenger seats";
+	    	  break;
+	      case 7 :
+	    	  var category = "D, DE with more than 16 passenger seats";
+	    	  break;
+	      case 8 :
+	    	  var category = "D, DE used on scheduled transport services";
+	    	  break;
+	      case 9 :
+	    	  var category = "Tb Trolleybuses";
+	    	  break;
+	      case 10 :
+	    	  var category = "Tm Trams";
+	    	  break;
+	      case 11 :
+	    	  var category = "Tractors, self-propelled road-building and other machines";
+	    	  break;
+	     }
+	  
+	  e = document.getElementById("city");
+	  var city = e.options[e.selectedIndex].value;
+	  
+	    switch(e){
+          case 0 :
+    	    var city = "Ufa ";
+    	    break;
+          case 1 :
+    	    var city = "Voronezh";
+    	    break;
+          case 2 :
+    	    var city = "Omsk";
+    	    break;
+          case 3 :
+    	    var city = "Chelyabinsk";
+    	    break;
+          case 4 :
+    	    var city= "Moscow";
+    	    break;
+    	  }
+	  
+	  e = document.getElementById("cbm");
+	  var cbm = e.options[e.selectedIndex].value;
+	  
+	    switch(e){
+          case 0 :
+    	    var cbm = "M";
+    	    break;
+          case 1 :
+    	    var cbm = "0";
+    	    break;
+          case 2 :
+    	    var cbm = "1";
+    	    break;
+          case 3 :
+    	    var cbm = "2";
+    	    break;
+          case 4 :
+      	    var cbm = "3";
+            break;
+          case 5 :
+    	    var cbm = "4";
+    	    break;
+          case 6 :
+    	    var cbm = "5";
+    	    break;
+          case 7 :
+    	    var cbm = "6";
+    	    break;
+         case 8 :
+    	    var cbm = "7";
+    	    break;
+          case 9 :
+    	    var cbm = "8";
+    	    break;
+          case 10 :
+       	    var cbm = "9";
+            break;
+          case 11 :
+    	    var cbm = "10";
+    	    break;
+          case 12 :
+    	    var cbm = "11";
+    	    break;
+          case 13 :
+    	    var cbm = "12";
+    	    break;
+          case 14 :
+    	    var cbm = "13";
+    	    break;
+	      }
+	  
+	  e = document.getElementById("age");
+	  var age = e.options[e.selectedIndex].value;
+	  
+	    switch(e){
+          case 0 :
+    	    var age = "16 - 21";
+    	    break;
+          case 1 :
+    	    var age = "22 - 24";
+    	    break;
+          case 2 :
+    	    var age = "25 - 29";
+    	    break;
+          case 3 :
+    	    var age = "30 - 34";
+    	    break;
+          case 4 :
+    	    var age = "35 - 39";
+    	    break;
+          case 5 :
+    	    var age = "40 - 49";
+    	    break;
+          case 6 :
+    	    var age = "50 - 59";
+    	    break;
+         case 7 :
+    	    var age = "over 59";
+    	    break;
+	     }
+	  
+	  e = document.getElementById("experience");
+	  var experience = e.options[e.selectedIndex].value;
+	  
+	    switch(e){
+          case 0 :
+  	        var experience = "0";
+  	        break;
+          case 1 :
+  	        var experience = "1";
+  	        break;
+          case 2 :
+  	        var experience = "2";
+  	        break;
+          case 3 :
+  	        var experience = "3 - 4";
+  	        break;
+          case 4 :
+  	        var experience = "5 - 6";
+  	        break;
+          case 5 :
+  	        var experience = "7 - 9";
+  	        break;
+          case 6 :
+  	        var experience = "10 - 14";
+  	        break;
+          case 7 :
+  	        var experience = "over 14";
+  	        break;
+	      }
+	  e = document.getElementById("cm");
+	  var cm = e.options[e.selectedIndex].value;
+	  
+	    switch(e){
+          case 0 :
+	        var cm = "from 50";
+	        break;
+          case 1 :
+	        var cm = "51 to 70";
+	        break;
+          case 2 :
+	        var cm = "71 to 100";
+	        break;
+          case 3 :
+	        var cm = "101 to 120";
+	        break;
+          case 4 :
+	        var cm = "121 to 150";
+	        break;
+          case 5 :
+	        var cm = "up to 151";
+	        break;
+	    }
+	  
+	  e = document.getElementById("pricep);
+	  var pricep = e.options[e.selectedIndex].value;
+	  
+	    switch(e){
+          case 0 :
+            var cm = "Yes";
+            break;
+          case 1 :
+            ar cm = "No";
+            break;
+	    }
+	  
+	  e = document.getElementById("promo");
+	  var promo = e.options[e.selectedIndex].text;
+	  
+	  e = document.getElementById("price");
+	  var prise = e.options[e.selectedIndex].text;
+	  
+	  
 
         doc.autoTable(
-                ['Parameters', 'Choice'],
+                ['Parameter names', 'Selected parameters'],
                 [
                 ['Category', category],
-                ['City', 'Janice'],
-                ['CBM','Ruth'],
-                ['Age', 'Jason'],
-                ['Experience', 'Jane'],
-                ['Power', 'Adam'],
-                ['Pricep', 'Adam'],
-                ['Promocode', 'Adam'],
-                ['Summ', 'Adam'],
+                ['City', city],
+                ['CBM', cbm],
+                ['Age', age],
+                ['Experience', experience],
+                ['Power', cm],
+                ['Pricep', pricep],
+                ['Promocode', promo],
+                ['Summ', prise],
                 ],
               )
 		doc.save("OSAGO.pdf");
