@@ -17,7 +17,7 @@
                   </ul>
                 </nav>
               </div>
-  				<div id="auth" class="form">
+  				<div id="adm" class="form">
 	  				<label for="color">Смена Цвета</label>
 	    			<select id="color" name="color">
 						<option ${category0} value="#D6912F">orange</option>
@@ -25,7 +25,7 @@
 						<option ${category2} value="#DAD8FE">Бурмалиновый</option>
 						</select>
 						</div>
-				<div class="item">
+				<div id="adm" class="form">
 					<label for="cfg1">Изменение конфигурации</label>
 					<input type="text" name="cfg1" id="cfg1" value="">
 				</div>

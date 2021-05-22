@@ -70,9 +70,10 @@ nav li {
   margin: 0 auto;
 }
 #adm {
-	display:flex;
-	flex-direction:row;
-	margin: 20px;
+    display:flex;
+    justify-content: center;
+    max-width: 300px;
+    margin: auto;
 }
 nav a {
 	text-decoration: none;
