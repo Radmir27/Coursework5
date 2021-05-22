@@ -4,46 +4,10 @@
 <html>
  <head>
   <meta charset="utf-8" />
+  <link rel="stylesheet" href="/style.css">
   <title>Админская панель</title>
  </head>
  		<body bgcolor="#DAD8FE" leftmargin="40">
-			 <style>
-               .title{
-                 margin: auto;
-                 text-align: center;
-               }
-               .logo {
-               		float: left;
-               }
-                nav {
-                   	float: right;
-               }
-               nav ul {
-                 margin: 0;
-                 padding: 0;
-                 list-style: none;
-               }
-               nav li {
-                 display: inline-block;
-               }
-               .container:after {
-                 content: "";
-                 display: table;
-                 clear: both;
-               }
-               .container {
-                 width: 100%;
-                 max-width: 1024px;
-                 padding: 15px;
-                 margin: 0 auto;
-               }
-               nav a {
-               	text-decoration: none;
-               	line-height: 38px;
-               }
-           </style>
-           <!--STYLE_END-->
-                       <header>
               <div class="container">
               	<a href="/" class="logo">PI221GR5</a>
                 <nav>
@@ -53,10 +17,26 @@
                   </ul>
                 </nav>
               </div>
- 			 <form action="UploadDownloadFileConfServlet" enctype="multipart/form-data" method="post">
-					<p>Загрузить новые коэффициенты на сервер</p>
-   					<p><input type="file" name="config" requered accept="*.pdf/*.txt">
-  				<input type="submit" value="Отправить"></p>
-  </form>
+  				<div class="item">
+	  				<label for="color">Смена Цвета</label>
+	    			<select id="color" name="color">
+						<option ${category0} value="#D6912F">orange</option>
+						<option ${category1} value="#37A1FA">Синиватый</option>
+						<option ${category2} value="#DAD8FE">Бурмалиновый</option>
+						</select>
+						</div>
+				<div class="item">
+					<label for="cfg1">Изменение конфигурации</label>
+					<input type="text" name="cfg1" id="cfg1" value="">
+				</div>
+  <script type="text/javascript">
+  window.onload=function(){
+	  var button=document.getElementById('color');
+	  var body=document.getElementsByTagName('body')[0];
+	  button.onchange=function(){
+		  body.style.backgroundColor=button.value;
+	  };
+  };
+  </script>
  </body>
 </html>

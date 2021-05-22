@@ -6,77 +6,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Калькулятор расчета ОСАГО</title>
+<link rel="stylesheet" href="/style.css">
 </head>
-
 	<body bgcolor="#DAD8FE" leftmargin="40">
-           <!--STYLE_START-->
-           <style>
-               .title{
-                   margin: auto;
-                   text-align: center;
-               }
-               select {
-    				width: 325px; /* Ширина списка в пикселах */
-   				}
-        
-               .form {
-                   display:flex;
-                   justify-content: center;
-                   max-width: 600px;
-                   margin: auto;
-                   border: 2px solid gray;
-                   border-radius: 10=0px;
-                   padding:10px;
-               }
-               .item input {
-             	   width: 40%;
-               }
-        
-               .form .item {
-                   display:flex;
-                   flex-direction:row;
-                   margin: 10px;
-                   align-items: flex-start;
-                   width: 100%;
-                   justify-content: space-between;
-               }
-               .logo {
-               		float: left;
-               }
-                nav {
-                   	float: right;
-               }
-               nav ul {
-                 margin: 0;
-                 padding: 0;
-                 list-style: none;
-               }
-               nav li {
-                 display: inline-block;
-               }
-               .container:after {
-                 content: "";
-                 display: table;
-                 clear: both;
-               }
-               .container {
-                 width: 100%;
-                 max-width: 1024px;
-                 padding: 15px;
-                 margin: 0 auto;
-               }
-               nav a {
-               	text-decoration: none;
-               	line-height: 38px;
-               }
-           </style>
-           <!--STYLE_END-->
-                       <header>
+                	<header>
               <div class="container">
               	<a href="/" class="logo">PI221GR5</a>
                 <nav>
                   <ul>
-                    <li><a href="${pageContext.request.contextPath}/Authorization.jsp">Вход</a></li>
+                    <li><a href="${pageContext.request.contextPath}/Login.java">Вход</a></li>
                     <li><a href="${pageContext.request.contextPath}/authors.jsp">О нас</a></li>
                   </ul>
                 </nav>
@@ -420,10 +358,10 @@
                 ['CBM', cbm],
                 ['Age', age + " years"],
                 ['Experience', experience + " years"],
-                ['Power', cm + " horsepower"],
+                ['Power', cm + "horsepower"],
                 ['Trailer', pricep],
                 ['Promo', promo],
-                ['Result', price + " rubles"],
+                ['Result', price + "rubles"],
                 ],
               )
 		doc.save("OSAGO.pdf");

@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+body {
+	background:#DAD8FE;
+}
+.title{
+    margin: auto;
+    text-align: center;
+}
+select {
+	width: 325px; /* Ширина списка в пикселах */
+}
+.form#calc{
+    display:flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: auto;
+    border: 2px solid gray;
+    border-radius: 100px;
+    padding:10px;
+}
+
+.form#auth{
+    display:flex;
+    justify-content: center;
+    max-width: 300px;
+    margin: auto;
+    border: 2px solid gray;
+    border-radius: 33px;
+    padding:25px;
+}
+.item input {
+  width: 40%;
+}
+
+.form .item {
+    display:flex;
+    flex-direction:row;
+    margin: 10px;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: space-between;
+}
+#auth .item {
+    flex-direction:column;
+}
+.logo {
+		float: left;
+}
+ nav {
+    	float: right;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.container {
+  width: 100%;
+  max-width: 1024px;
+  padding: 15px;
+  margin: 0 auto;
+}
+nav a {
+	text-decoration: none;
+	line-height: 38px;
+}
