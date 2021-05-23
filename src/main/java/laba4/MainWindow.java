@@ -127,7 +127,7 @@ public class MainWindow extends HttpServlet {
 			for (int i = 0; i < 8; i++) {
 				if (i == experience_try) {
 					request.setAttribute("experience" + i, "selected");
-					if (i == 1) {
+					if (i == 0) {
 						request.setAttribute("cbm" , "disabled");
 			        	request.setAttribute("cbm4" , "selected");
 					}
