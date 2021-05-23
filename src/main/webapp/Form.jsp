@@ -164,6 +164,7 @@
                 e = document.getElementById("pricep");
             	  if (category === '4' || category === '5') {
             		  document.querySelector('input[value="1"]').checked = true;
+            		  document.getElementById("promo").disabled = true;
             	  }
             }
             </script>
