@@ -86,7 +86,6 @@
 			<div class="item">
  				<label for="experience">Стаж (лет): </label>
     			<select onchange="ref1()" id="experience" name="experience">
-					<option ${experience0} value="0">0</option>
 					<option ${experience1} value="1">1</option>
 					<option ${experience2} value="2">2</option>
 					<option ${experience3} value="3">3 - 4</option>
@@ -94,6 +93,7 @@
 					<option ${experience5} value="5">7 - 9</option>
 					<option ${experience6} value="6">10 - 14</option>
 					<option ${experience7} value="7">более 14</option>
+					<option ${experience0} value="0">0</option>
 				</select>
 			</div>
 			<div class="item">

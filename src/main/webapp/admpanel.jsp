@@ -14,6 +14,7 @@
                   <ul>
                     <li><a href="${pageContext.request.contextPath}/authors.jsp">О нас</a></li>
                     <li><a href="${pageContext.request.contextPath}/index.jsp">Вход</a></li>
+                    <li><a href="${pageContext.request.contextPath}/Form.jsp">Калькулятор</a></li>
                   </ul>
                 </nav>
               </div>
