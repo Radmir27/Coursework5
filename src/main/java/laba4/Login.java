@@ -30,11 +30,11 @@ public class Login extends HttpServlet {
             request.getRequestDispatcher("/Form.jsp").forward(request, response);
         } else {
         	PrintWriter out = response.getWriter();  
+        	request.getRequestDispatcher("/index.jsp").forward(request, response);
         	response.setContentType("text/html");  
         	out.println("<script type=\"text/javascript\">");  
         	out.println("alert('Неправильно введен логин или пароль');");  
         	out.println("</script>");
-        	request.getRequestDispatcher("/index.jsp").forward(request, response);
         }
     }
 
