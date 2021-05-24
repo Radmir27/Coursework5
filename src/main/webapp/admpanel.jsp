@@ -33,20 +33,35 @@
 					<input type="text" name="city0" id="city0" value="${city0}">
 				</div>
 				<div class="form">
+					<label for="labe0">${labe0}</label>
+				</div>
+				<div class="form">
 					<label for="city1">Изменение коэффициента города Воронежа:</label>
 					<input type="text" name="city1" id="city1" value="${city1}">
+				</div>
+				<div class="form">
+					<label for="labe1">${labe1}</label>
 				</div>
 				<div class="form">
 					<label for="city2">Изменение коэффициента города Омска:</label>
 					<input type="text" name="city2" id="city2" value="${city2}">
 				</div>
 				<div class="form">
+					<label for="labe2">${labe2}</label>
+				</div>
+				<div class="form">
 					<label for="city3">Изменение коэффициента города Челябинска:</label>
 					<input type="text" name="city3" id="city3" value="${city3}">
 				</div>
 				<div class="form">
+					<label for="labe3">${labe3}</label>
+				</div>
+				<div class="form">
 					<label for="city4">Изменение коэффициента города Москвы:</label>
 					<input type="text" name="city4" id="city4" value="${city4}">
+				</div>
+				<div class="form">
+					<label for="labe4">${labe4}</label>
 				</div>
 				<div class="item">
             	<input type="submit" name="sign" value="Сохранить">

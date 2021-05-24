@@ -5,11 +5,17 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+//import jakarta.servlet.ServletException;
+//import jakarta.servlet.annotation.WebServlet;
+//import jakarta.servlet.http.HttpServlet;
+//import jakarta.servlet.http.HttpServletRequest;
+//import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet(name="City", urlPatterns="/JavaCity")
 public class City extends HttpServlet {
@@ -19,13 +25,11 @@ public class City extends HttpServlet {
      */
     private static final long serialVersionUID = 1L;
     
-    static boolean prov1;
-    static boolean prov2;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestCity auth = RequestCity .fromRequestParameters(request);
         auth.setConfCity(request);
-        request.getRequestDispatcher("/admpanelTrue.jsp").forward(request, response);
+        request.getRequestDispatcher("/admpanel.jsp").forward(request, response);
 
     }
 
@@ -75,14 +79,19 @@ public class City extends HttpServlet {
         	
         	File file;
         	
-        	/*Coef coef = new Coef();
+        	String[] labe = new String[5];
+        	
+        	
+        	Coef coef = new Coef();
         	coef.setCity();
         	
         	for (int i = 0; i < 5; i++) {
-        		if (city[i] == 0) {
+        		labe[i] = "Коэффициент города успешно изменен!"; 
+        		if (city[i] == (float)0) {
         			city[i] = coef.cityCoef[i];
+        			labe[i] = "Коэффициент города не изменился."; 
         		}
-        	}*/
+        	}
         	try {
     			String filepath = new File("").getCanonicalPath();
     			String[] parsfilepath = filepath.split("/");
@@ -101,8 +110,13 @@ public class City extends HttpServlet {
             	}
         		pw.close();
         	} catch(Exception ex) {
-        		ex.printStackTrace();
+        		for (int i = 0; i < 5; i++) {
+        			labe[i] = "Коэффициент города не изменился."; 
+            	}
     		}
+        	for (int i = 0; i < 5; i++) {
+        		request.setAttribute("labe" + i, labe[i]);
+        	}
         }
     }
 }

@@ -51,9 +51,6 @@
 				<div class="item">
             	<input type="submit" name="sign" value="Сохранить">
             </div>
-            <div class="form">
-					<label for="tr">Изменения коэффициентов городов отправлены</label>
-				</div>
 				</form>
   <script type="text/javascript">
   window.onload=function(){
