@@ -24,10 +24,18 @@
 	    			<select id="color" name="color">
 						<option value="#DAD8FE">Бурмалиновый</option>
 						<option value="#D6912F">Оранжевый</option>
-						<option value="#37A1FA">Синиватый</option>
+						<option value="#37A1FA">Синий</option>
 						</select>
 						</div>
-				<div id="adm" class="form">
+				<div class="form">
+					<label for="cfg1">Изменение коэффициента промокода</label>
+					<input type="text" name="cfg1" id="cfg1">
+				</div>
+				<div class="form">
+					<label for="cfg1">Изменение коэффициента промокода</label>
+					<input type="text" name="cfg1" id="cfg1">
+				</div>
+				<div class="form">
 					<label for="cfg1">Изменение коэффициента промокода</label>
 					<input type="text" name="cfg1" id="cfg1">
 				</div>

@@ -33,11 +33,11 @@ public class Coef implements parametrs {
  		}
  		filepath=abspath+"/conf/config.txt";
  		File file = new File(filepath);*/
-		File file = new File("src/main/webapp/conf/config.txt");
+		File file1 = new File("src/main/webapp/conf/config.txt");
         //создаем объект FileReader для объекта File
-        FileReader fr = new FileReader(file);
+        FileReader fr1 = new FileReader(file1);
         //создаем BufferedReader с существующего FileReader для построчного считывания
-        BufferedReader reader = new BufferedReader(fr);
+        BufferedReader reader = new BufferedReader(fr1);
         // считаем сначала первую строку
         String line;
         String inf;
@@ -54,17 +54,7 @@ public class Coef implements parametrs {
 				btCoef[i][j] = Integer.parseInt(inf);
 			}
 		}
-		line = reader.readLine();
-		for (int i = 0; i < 5; i++) {
-			int end = line.indexOf(' '); // ищем индекс первого пробела
-			if (end == -1) {
-				inf = line.substring(0);
-			} else {
-				inf = line.substring(0, end);
-			}
-			line = line.substring(end+1);
-			cityCoef[i] = Float.parseFloat(inf);
-		}
+		
 		line = reader.readLine();
 		for (int i = 0; i < 15; i++) {
 			int end = line.indexOf(' '); // ищем индекс первого пробела
@@ -115,7 +105,28 @@ public class Coef implements parametrs {
 		promoConf = Float.parseFloat(line);
 		line = reader.readLine();
 		stafConf = Float.parseFloat(line);
-		fr.close();
+		fr1.close();
+		reader.close();
+		
+		File file2 = new File("src/main/webapp/conf/city.txt");
+        //создаем объект FileReader для объекта File
+        FileReader fr2 = new FileReader(file2);
+        //создаем BufferedReader с существующего FileReader для построчного считывания
+        BufferedReader reader2 = new BufferedReader(fr2);
+        // считаем сначала первую строку
+        
+		line = reader2.readLine();
+		for (int i = 0; i < 5; i++) {
+			int end = line.indexOf(' '); // ищем индекс первого пробела
+			if (end == -1) {
+				inf = line.substring(0);
+			} else {
+				inf = line.substring(0, end);
+			}
+			line = line.substring(end+1);
+			cityCoef[i] = Float.parseFloat(inf);
+		}
+		fr2.close();
 		reader.close();
 	}
 }
