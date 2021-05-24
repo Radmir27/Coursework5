@@ -25,7 +25,7 @@ public class City extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestCity auth = RequestCity .fromRequestParameters(request);
         auth.setConfCity(request);
-        request.getRequestDispatcher("/admpanel.jsp").forward(request, response);
+        request.getRequestDispatcher("/admpanelTrue.jsp").forward(request, response);
 
     }
 
