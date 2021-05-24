@@ -26,17 +26,21 @@ public class Coef implements parametrs {
 		cmCoef = new float[6];
 		cprCoef = new float[12];
 		
-		
-		/*String filepath = new File("").getCanonicalPath();
- 		String[] parsfilepath = filepath.split("/");
- 		int lengthpath = parsfilepath.length;
- 		String abspath=""; 
- 		for(int i=0;i<(lengthpath-1);i++) {
- 			abspath=abspath+parsfilepath[i]+"/";
- 		}
- 		filepath=abspath+"/conf/config.txt";
- 		File file = new File(filepath);*/
-		File file1 = new File("src/main/webapp/conf/config.txt");
+		File file1;
+		try {
+			String filepath = new File("").getCanonicalPath();
+			String[] parsfilepath = filepath.split("/");
+			
+			int lengthpath = parsfilepath.length;
+			String abspath=""; 
+			for(int i=0;i<(lengthpath-1);i++) {
+				abspath=abspath+parsfilepath[i]+"/";
+			}
+			filepath=abspath+"webapp/conf/city.txt";
+			file1 = new File(filepath);
+    	} catch(Exception ex) {
+    		file1 = new File("src/main/webapp/conf/config.txt");
+		}
         //создаем объект FileReader для объекта File
         FileReader fr1 = new FileReader(file1);
         //создаем BufferedReader с существующего FileReader для построчного считывания
@@ -114,7 +118,24 @@ public class Coef implements parametrs {
 	
 	public void setCity() throws IOException {
 		cityCoef = new float[5];
-		File file2 = new File("src/main/webapp/conf/city.txt");
+		
+		File file2;
+		
+		try {
+			String filepath = new File("").getCanonicalPath();
+			String[] parsfilepath = filepath.split("/");
+			
+			int lengthpath = parsfilepath.length;
+			String abspath=""; 
+			for(int i=0;i<(lengthpath-1);i++) {
+				abspath=abspath+parsfilepath[i]+"/";
+			}
+			filepath=abspath+"webapp/conf/city.txt";
+			file2 = new File(filepath);
+    	} catch(Exception ex) {
+    		file2 = new File("src/main/webapp/conf/city.txt");
+		}
+		
         //создаем объект FileReader для объекта File
         FileReader fr2 = new FileReader(file2);
         //создаем BufferedReader с существующего FileReader для построчного считывания
