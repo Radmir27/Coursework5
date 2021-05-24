@@ -110,7 +110,7 @@
 			<div class="item">
 				<label for="pricep">Наличие прицепа: </label>
     			<input onchange="ref2()" type="radio" name="pricep" ${pricep1} value="1">Да (промокод не учитывается)
-    			<input onchange="ref2()" type="radio" name="pricep" ${pricep0} value="-1">Нет
+    			<input onchange="ref2()" type="radio" name="pricep" ${pricep0} checked value="-1">Нет
 			</div>
 			<div class="item">
 				<label for="promo">Промокод: </label>
@@ -184,9 +184,8 @@
  function generate() {
 	 var price = document.getElementById("price").value;
 	 if (price === "") {
-		 alert("Не выполнен расчет стоимости ОСАГО. Перед формированием pdf-файла, нажмите кнопку Расчитать.");
-		 break;
-	 }
+		 alert('Не выполнен расчет стоимости ОСАГО. Перед формированием pdf-файла, нажмите кнопку Расчитать.');
+	 } else {
 	 
       var doc = new jsPDF('p', 'pt');
       doc.setFont('Courier');
@@ -417,6 +416,7 @@
                 ],
               )
 		doc.save("OSAGO.pdf");
+        }
     }
 </script>
         
