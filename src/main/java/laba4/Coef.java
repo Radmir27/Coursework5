@@ -16,13 +16,16 @@ public class Coef implements parametrs {
 	public float promoConf;		// расчитывается от промокода
 	public float stafConf;		// расчитывается от ставке
 	
+	String line;
+    String inf;
+	
 	public void setParam() throws IOException {
 		btCoef = new int[12][2];
-		cityCoef = new float[5];
 		cbmCoef = new float[15];
 		csvsCoef = new float[7][8];
 		cmCoef = new float[6];
 		cprCoef = new float[12];
+		
 		
 		/*String filepath = new File("").getCanonicalPath();
  		String[] parsfilepath = filepath.split("/");
@@ -39,8 +42,6 @@ public class Coef implements parametrs {
         //создаем BufferedReader с существующего FileReader для построчного считывания
         BufferedReader reader = new BufferedReader(fr1);
         // считаем сначала первую строку
-        String line;
-        String inf;
 		for (int i = 0; i < 12; i++) {
 			line = reader.readLine();
 			for (int j = 0; j < 2; j++) {
@@ -108,6 +109,11 @@ public class Coef implements parametrs {
 		fr1.close();
 		reader.close();
 		
+		setCity();
+	}
+	
+	public void setCity() throws IOException {
+		cityCoef = new float[5];
 		File file2 = new File("src/main/webapp/conf/city.txt");
         //создаем объект FileReader для объекта File
         FileReader fr2 = new FileReader(file2);
@@ -127,6 +133,6 @@ public class Coef implements parametrs {
 			cityCoef[i] = Float.parseFloat(inf);
 		}
 		fr2.close();
-		reader.close();
+		reader2.close();
 	}
 }

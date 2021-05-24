@@ -20,6 +20,7 @@
               </div>
               <div class="title"><h1>Панель администратора</h1></div>
   				<div id="adm" class="form">
+  				<form action="${pageContext.request.contextPath}/JavaCity" method="post">
 	  				<label for="color">Смена Цвета</label>
 	    			<select id="color" name="color">
 						<option value="#DAD8FE">Бурмалиновый</option>
@@ -28,17 +29,29 @@
 						</select>
 						</div>
 				<div class="form">
-					<label for="cfg1">Изменение коэффициента промокода</label>
-					<input type="text" name="cfg1" id="cfg1">
+					<label for="cfg1">Изменение коэффициента города Уфы:</label>
+					<input type="text" name="cfg1" id="cfg1" value="${city0}">
 				</div>
 				<div class="form">
-					<label for="cfg1">Изменение коэффициента промокода</label>
-					<input type="text" name="cfg1" id="cfg1">
+					<label for="cfg1">Изменение коэффициента города Воронежа:</label>
+					<input type="text" name="cfg1" id="cfg1" value="${city1}">
 				</div>
 				<div class="form">
-					<label for="cfg1">Изменение коэффициента промокода</label>
-					<input type="text" name="cfg1" id="cfg1">
+					<label for="cfg1">Изменение коэффициента города Омска:</label>
+					<input type="text" name="cfg1" id="cfg1" value="${city2}">
 				</div>
+				<div class="form">
+					<label for="cfg1">Изменение коэффициента города Челябинска:</label>
+					<input type="text" name="cfg1" id="cfg1" value="${city3}">
+				</div>
+				<div class="form">
+					<label for="cfg1">Изменение коэффициента города Москвы:</label>
+					<input type="text" name="cfg1" id="cfg1" value="${city4}">
+				</div>
+				<div class="item">
+            	<input type="submit" name="sign" value="Сохранить">
+            </div>
+				</form>
   <script type="text/javascript">
   window.onload=function(){
 	  var button=document.getElementById('color');
