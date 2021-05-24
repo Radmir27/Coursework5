@@ -182,6 +182,12 @@
 
 <script>
  function generate() {
+	 var price = document.getElementById("price").value;
+	 if (price === "") {
+		 alert("Не выполнен расчет стоимости ОСАГО. Перед формированием pdf-файла, нажмите кнопку Расчитать.");
+		 break;
+	 }
+	 
       var doc = new jsPDF('p', 'pt');
       doc.setFont('Courier');
       var e;
@@ -395,8 +401,6 @@
 	    }
 	  
 	  var promo = document.getElementById("promo").value;
-	  
-	  var price = document.getElementById("price").value;
 	  
         doc.autoTable(
                 ['Parameter names', 'Selected parameters'],
