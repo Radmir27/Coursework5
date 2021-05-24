@@ -30,6 +30,10 @@ public class Login extends HttpServlet {
         auth.Proverka(request);
 
         if (prov1) {
+        	for (int i = 0; i < 5; i++) {
+        			request.setAttribute("labe" + i, "hidden");
+        			request.setAttribute("labe" + i + "1", "hidden");
+        	}
             request.getRequestDispatcher("/admpanel.jsp").forward(request, response);
         } else if (prov2) {
             request.getRequestDispatcher("/Form.jsp").forward(request, response);
