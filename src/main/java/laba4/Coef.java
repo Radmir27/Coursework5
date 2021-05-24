@@ -27,6 +27,8 @@ public class Coef implements parametrs {
 		cprCoef = new float[12];
 		
 		File file1;
+		FileReader fr1;
+		
 		try {
 			String filepath = new File("").getCanonicalPath();
 			String[] parsfilepath = filepath.split("/");
@@ -38,11 +40,12 @@ public class Coef implements parametrs {
 			}
 			filepath=abspath+"webapp/conf/city.txt";
 			file1 = new File(filepath);
+			fr1 = new FileReader(file1);
     	} catch(Exception ex) {
     		file1 = new File("src/main/webapp/conf/config.txt");
+    		fr1 = new FileReader(file1);
 		}
         //создаем объект FileReader для объекта File
-        FileReader fr1 = new FileReader(file1);
         //создаем BufferedReader с существующего FileReader для построчного считывания
         BufferedReader reader = new BufferedReader(fr1);
         // считаем сначала первую строку
@@ -120,6 +123,7 @@ public class Coef implements parametrs {
 		cityCoef = new float[5];
 		
 		File file2;
+		FileReader fr2;
 		
 		try {
 			String filepath = new File("").getCanonicalPath();
@@ -132,12 +136,12 @@ public class Coef implements parametrs {
 			}
 			filepath=abspath+"webapp/conf/city.txt";
 			file2 = new File(filepath);
+			fr2 = new FileReader(file2);
     	} catch(Exception ex) {
     		file2 = new File("src/main/webapp/conf/city.txt");
+			fr2 = new FileReader(file2);
 		}
 		
-        //создаем объект FileReader для объекта File
-        FileReader fr2 = new FileReader(file2);
         //создаем BufferedReader с существующего FileReader для построчного считывания
         BufferedReader reader2 = new BufferedReader(fr2);
         // считаем сначала первую строку
