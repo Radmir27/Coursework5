@@ -18,10 +18,10 @@
         <div class="item">
             <input type="submit" name="sign" value="Вход">
         </div>
+    </form>
         <div class="item">
             <label for="login">Неправильно введен логин или пароль</label>
         </div>
-    </form>
 
 </div>
 </body>
