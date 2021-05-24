@@ -1,7 +1,6 @@
 package laba4;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,7 +28,7 @@ public class Login extends HttpServlet {
         } else if (prov2) {
             request.getRequestDispatcher("/Form.jsp").forward(request, response);
         } else {
-        	request.getRequestDispatcher("/index.jsp").forward(request, response);
+        	request.getRequestDispatcher("/indexFalse.jsp").forward(request, response);
         }
     }
 
