@@ -79,17 +79,17 @@ public class City extends HttpServlet {
         	
         	File file;
         	
-        	String[] labe = new String[5];
+        	boolean[] bl = new boolean[5];
         	
         	
         	Coef coef = new Coef();
         	coef.setCity();
         	
         	for (int i = 0; i < 5; i++) {
-        		labe[i] = "Коэффициент города успешно изменен!"; 
+        		bl[i] = true; 
         		if (city[i] == (float)0) {
         			city[i] = coef.cityCoef[i];
-        			labe[i] = "Коэффициент города не изменился."; 
+        			bl[i] = false; 
         		}
         	}
         	try {
@@ -111,11 +111,15 @@ public class City extends HttpServlet {
         		pw.close();
         	} catch(Exception ex) {
         		for (int i = 0; i < 5; i++) {
-        			labe[i] = "Коэффициент города не изменился."; 
+        			bl[i] = false; 
             	}
     		}
         	for (int i = 0; i < 5; i++) {
-        		request.setAttribute("labe" + i, labe[i]);
+        		if (bl[i]) {
+        			request.setAttribute("labe" + i, "hidden");
+        		} else {
+        			request.setAttribute("labe" + i + "1", "hidden");
+        		}
         	}
         }
     }
