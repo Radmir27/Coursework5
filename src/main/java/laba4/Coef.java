@@ -7,14 +7,14 @@ import java.io.IOException;
 
 public class Coef implements parametrs {
 	
-	public int[][] btCoef;		// расчитывается от категории
-	public float[] cityCoef;	// расчитывается от города
-	public float[] cbmCoef;		// расчитывается от кбм
-	public float[][] csvsCoef;	// расчитывается от возраста и опыта
-	public float[] cmCoef;		// расчитывается от CM
-	public float[] cprCoef;		// расчитывается от CPR
-	public float promoConf;		// расчитывается от промокода
-	public float stafConf;		// расчитывается от ставке
+	public int[][] btCoef;		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	public float[] cityCoef;	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+	public float[] cbmCoef;		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ
+	public float[][] csvsCoef;	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ
+	public float[] cmCoef;		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ CM
+	public float[] cprCoef;		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ CPR
+	public float promoConf;		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	public float stafConf;		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	
 	String line;
     String inf;
@@ -38,21 +38,21 @@ public class Coef implements parametrs {
 			for(int i=0;i<(lengthpath-1);i++) {
 				abspath=abspath+parsfilepath[i]+"/";
 			}
-			filepath=abspath+"webapp/conf/city.txt";
+			filepath=abspath+"apache-tomcat-10.0.5/webapps/Calculate/conf/config.txt";
 			file1 = new File(filepath);
 			fr1 = new FileReader(file1);
     	} catch(Exception ex) {
     		file1 = new File("src/main/webapp/conf/config.txt");
     		fr1 = new FileReader(file1);
 		}
-        //создаем объект FileReader для объекта File
-        //создаем BufferedReader с существующего FileReader для построчного считывания
+        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ FileReader пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ File
+        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ BufferedReader пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ FileReader пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         BufferedReader reader = new BufferedReader(fr1);
-        // считаем сначала первую строку
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 		for (int i = 0; i < 12; i++) {
 			line = reader.readLine();
 			for (int j = 0; j < 2; j++) {
-				int end = line.indexOf(' '); // ищем индекс первого пробела
+				int end = line.indexOf(' '); // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 				if (end == -1) {
 					inf = line.substring(0);
 				} else {
@@ -65,7 +65,7 @@ public class Coef implements parametrs {
 		
 		line = reader.readLine();
 		for (int i = 0; i < 15; i++) {
-			int end = line.indexOf(' '); // ищем индекс первого пробела
+			int end = line.indexOf(' '); // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 			if (end == -1) {
 				inf = line.substring(0);
 			} else {
@@ -77,7 +77,7 @@ public class Coef implements parametrs {
 		for (int i = 0; i < 7; i++) {
 			line = reader.readLine();
 			for (int j = 0; j < 8; j++) {
-				int end = line.indexOf(' '); // ищем индекс первого пробела
+				int end = line.indexOf(' '); // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 				if (end == -1) {
 					inf = line.substring(0);
 				} else {
@@ -89,7 +89,7 @@ public class Coef implements parametrs {
 		}
 		line = reader.readLine();
 		for (int i = 0; i < 6; i++) {
-			int end = line.indexOf(' '); // ищем индекс первого пробела
+			int end = line.indexOf(' '); // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 			if (end == -1) {
 				inf = line.substring(0);
 			} else {
@@ -100,7 +100,7 @@ public class Coef implements parametrs {
 		}
 		line = reader.readLine();
 		for (int i = 0; i < 12; i++) {
-			int end = line.indexOf(' '); // ищем индекс первого пробела
+			int end = line.indexOf(' '); // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 			if (end == -1) {
 				inf = line.substring(0);
 			} else {
@@ -134,7 +134,7 @@ public class Coef implements parametrs {
 			for(int i=0;i<(lengthpath-1);i++) {
 				abspath=abspath+parsfilepath[i]+"/";
 			}
-			filepath=abspath+"webapp/conf/city.txt";
+			filepath=abspath+"apache-tomcat-10.0.5/webapps/Calculate/conf/city.txt";
 			file2 = new File(filepath);
 			fr2 = new FileReader(file2);
     	} catch(Exception ex) {
@@ -142,13 +142,13 @@ public class Coef implements parametrs {
 			fr2 = new FileReader(file2);
 		}
 		
-        //создаем BufferedReader с существующего FileReader для построчного считывания
+        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ BufferedReader пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ FileReader пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         BufferedReader reader2 = new BufferedReader(fr2);
-        // считаем сначала первую строку
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         
 		line = reader2.readLine();
 		for (int i = 0; i < 5; i++) {
-			int end = line.indexOf(' '); // ищем индекс первого пробела
+			int end = line.indexOf(' '); // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 			if (end == -1) {
 				inf = line.substring(0);
 			} else {

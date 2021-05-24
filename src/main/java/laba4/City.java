@@ -5,11 +5,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet(name="City", urlPatterns="/JavaCity")
 public class City extends HttpServlet {
@@ -23,23 +23,16 @@ public class City extends HttpServlet {
     static boolean prov2;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestLogin auth = RequestLogin.fromRequestParameters(request);
+        RequestCity auth = RequestCity .fromRequestParameters(request);
         auth.setConfCity(request);
         request.getRequestDispatcher("/admpanel.jsp").forward(request, response);
 
-        /*if (prov1) {
-            request.getRequestDispatcher("/admpanel.jsp").forward(request, response);
-        } else if (prov2) {
-            request.getRequestDispatcher("/Form.jsp").forward(request, response);
-        } else {
-        	request.getRequestDispatcher("/indexFalse.jsp").forward(request, response);
-        }*/
     }
 
-    private static class RequestLogin {
+    private static class RequestCity  {
         private final float[] city;
 
-        private RequestLogin (String city0, String city1 ,String city2, String city3, String city4) {
+        private RequestCity  (String city0, String city1 ,String city2, String city3, String city4) {
         	city = new float[5];
         	try {
         		city[0] = Float.parseFloat(city0);
@@ -68,8 +61,8 @@ public class City extends HttpServlet {
     		}
         }
 
-        public static RequestLogin fromRequestParameters(HttpServletRequest request) {
-            return new RequestLogin(
+        public static RequestCity  fromRequestParameters(HttpServletRequest request) {
+            return new RequestCity (
             request.getParameter("city0"),
             request.getParameter("city1"),
             request.getParameter("city2"),
@@ -82,24 +75,24 @@ public class City extends HttpServlet {
         	
         	File file;
         	
-        	Coef coef = new Coef();
+        	/*Coef coef = new Coef();
         	coef.setCity();
         	
         	for (int i = 0; i < 5; i++) {
         		if (city[i] == 0) {
         			city[i] = coef.cityCoef[i];
         		}
-        	}
+        	}*/
         	try {
     			String filepath = new File("").getCanonicalPath();
     			String[] parsfilepath = filepath.split("/");
     			
     			int lengthpath = parsfilepath.length;
     			String abspath=""; 
-    			for(int i=0;i<(lengthpath-1);i++) {
+    			for(int i=0;i<(lengthpath-1);i++) { 
     				abspath=abspath+parsfilepath[i]+"/";
     			}
-    			filepath=abspath+"webapp/conf/city.txt";
+    			filepath=abspath+"apache-tomcat-10.0.5/webapps/Calculate/conf/city.txt";
     			file = new File(filepath);
     			FileWriter fw = new FileWriter(file);
         		PrintWriter pw = new PrintWriter(fw);
