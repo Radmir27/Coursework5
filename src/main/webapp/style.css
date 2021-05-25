@@ -29,10 +29,20 @@ select {
     border-radius: 33px;
     padding:25px;
 }
+.form#avt{
+    display:flex;
+    justify-content: center;
+    margin: auto;
+}
+.form#adm {
+    display:flex;
+    justify-content: left;
+    max-width: 300px;
+    margin: auto;
+}
 #calc .item input {
   width: 40%;
 }
-
 .form .item {
     display:flex;
     flex-direction:row;
@@ -68,12 +78,6 @@ nav li {
   max-width: 1024px;
   padding: 15px;
   margin: 0 auto;
-}
-#adm {
-    display:flex;
-    justify-content: center;
-    max-width: 300px;
-    margin: auto;
 }
 nav a {
 	text-decoration: none;

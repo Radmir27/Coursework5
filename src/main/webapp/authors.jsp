@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>О разработчиках</title>
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/style.css">
 </head>
 
 	<body bgcolor="#DAD8FE">

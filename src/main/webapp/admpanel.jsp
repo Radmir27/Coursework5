@@ -4,12 +4,12 @@
 <html>
  <head>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/style.css">
   <title>Панель администратора</title>
  </head>
  		<body bgcolor="#DAD8FE" leftmargin="40">
               <div class="container">
-              	<a ref="/" class="logo">PI221GR5</a>
+              	<a href="/" class="logo">PI221GR5</a>
                 <nav>
                   <ul>
                     <li><a href="${pageContext.request.contextPath}/authors.jsp">О нас</a></li>
@@ -19,15 +19,7 @@
                 </nav>
               </div>
               <div class="title"><h1>Панель администратора</h1></div>
-  				<div id="adm" class="form">
-  				<form action="${pageContext.request.contextPath}/JavaCity" method="post">
-	  				<label for="color">Смена Цвета</label>
-	    			<select id="color" name="color">
-						<option value="#DAD8FE">Бурмалиновый</option>
-						<option value="#D6912F">Оранжевый</option>
-						<option value="#37A1FA">Синий</option>
-						</select>
-						</div>
+					<form action="${pageContext.request.contextPath}/JavaCity" method="post">
 				<div class="form">
 					<label for="city0">Изменение коэффициента города Уфы:</label>
 					<input type="text" name="city0" id="city0" value="${city0}">
@@ -72,14 +64,5 @@
             	<input type="submit" name="sign" value="Сохранить">
             </div>
 				</form>
-  <script type="text/javascript">
-  window.onload=function(){
-	  var button=document.getElementById('color');
-	  var body=document.getElementsByTagName('body')[0];
-	  button.onchange=function(){
-	  body.style.backgroundColor=button.value;
-	  };
-  };
-  </script>
  </body>
 </html>

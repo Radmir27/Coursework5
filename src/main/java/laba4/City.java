@@ -5,17 +5,17 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+//import javax.servlet.ServletException;
+//import javax.servlet.annotation.WebServlet;
+//import javax.servlet.http.HttpServlet;
+//import javax.servlet.http.HttpServletRequest;
+//import javax.servlet.http.HttpServletResponse;
 
-//import jakarta.servlet.ServletException;
-//import jakarta.servlet.annotation.WebServlet;
-//import jakarta.servlet.http.HttpServlet;
-//import jakarta.servlet.http.HttpServletRequest;
-//import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet(name="City", urlPatterns="/JavaCity")
 public class City extends HttpServlet {
@@ -101,9 +101,15 @@ public class City extends HttpServlet {
     			for(int i=0;i<(lengthpath-1);i++) { 
     				abspath=abspath+parsfilepath[i]+"/";
     			}
-    			filepath=abspath+"apache-tomcat-10.0.5/webapps/Calculate/conf/city.txt";
-    			file = new File(filepath);
-    			FileWriter fw = new FileWriter(file);
+    			//try {
+    			//	filepath=abspath+"apache-tomcat-10.0.5/webapps/Calculate/conf/city.txt";
+        		//	file = new File(filepath);
+        		//	FileWriter fw = new FileWriter(file);
+    			//} catch (Exception ex) {
+    				filepath=abspath+"webapps/Calculate/conf/city.txt";
+        			file = new File(filepath);
+        			FileWriter fw = new FileWriter(file);
+    			//}
         		PrintWriter pw = new PrintWriter(fw);
         		for (int i = 0; i < 5; i++) {
         			pw.print(city[i] + " ");

@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/style.css">
 <body bgcolor="#DAD8FE" leftmargin="40">
     <div class="title"><h1>АВТОРИЗАЦИЯ</h1></div> 
     <div id="auth" class="form">

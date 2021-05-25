@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Калькулятор расчета ОСАГО</title>
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/style.css">
 </head>
 	<body bgcolor="#DAD8FE" leftmargin="40">
                 	<header>
@@ -121,7 +121,7 @@
 				<input readonly type="text" name="price" id="price" value="${result}">
 			</div>
 			<div class="item">
-            	<input onclick="ref4()" type="submit" name="sign" value="Расчитать">
+            	<input onclick="ref4()" type="submit" name="sign" value="Рассчитать">
             </div>
             </form>
             </div>

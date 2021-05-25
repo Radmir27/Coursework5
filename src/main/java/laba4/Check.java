@@ -52,9 +52,15 @@ public class Check implements parametrs {
 			for(int i=0;i<(lengthpath-1);i++) {
 				abspath=abspath+parsfilepath[i]+"/";
 			}
-			filepath=abspath+"apache-tomcat-10.0.5/webapps/Calculate/conf/AdminLogPass.txt";
-			file1 = new File(filepath);
-			fr1 = new FileReader(file1);
+			try {
+				filepath=abspath+"apache-tomcat-10.0.5/webapps/Calculate/conf/AdminLogPass.txt";
+				file1 = new File(filepath);
+				fr1 = new FileReader(file1);
+			} catch (Exception ex) {
+				filepath=abspath+"webapps/Calculate/conf/AdminLogPass.txt";
+				file1 = new File(filepath);
+				fr1 = new FileReader(file1);
+			}
     	} catch(Exception ex) {
     		file1 = new File("src/main/webapp/conf/AdminLogPass.txt");
             fr1 = new FileReader(file1);
@@ -81,9 +87,15 @@ public class Check implements parametrs {
 			for(int i=0;i<(lengthpath-1);i++) {
 				abspath=abspath+parsfilepath[i]+"/";
 			}
-			filepath=abspath+"apache-tomcat-10.0.5/webapps/Calculate/conf/UserLogPass.txt";
-			file2 = new File(filepath);
-			fr2 = new FileReader(file2);
+			try {
+				filepath=abspath+"apache-tomcat-10.0.5/webapps/Calculate/conf/UserLogPass.txt";
+				file2 = new File(filepath);
+				fr2 = new FileReader(file2);
+			} catch (Exception ex) {
+				filepath=abspath+"/webapps/Calculate/conf/UserLogPass.txt";
+				file2 = new File(filepath);
+				fr2 = new FileReader(file2);
+			}
     	} catch(Exception ex) {
     		file2 = new File("src/main/webapp/conf/UserLogPass.txt");
             fr2 = new FileReader(file2);

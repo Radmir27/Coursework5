@@ -38,9 +38,15 @@ public class Coef implements parametrs {
 			for(int i=0;i<(lengthpath-1);i++) {
 				abspath=abspath+parsfilepath[i]+"/";
 			}
-			filepath=abspath+"apache-tomcat-10.0.5/webapps/Calculate/conf/config.txt";
-			file1 = new File(filepath);
-			fr1 = new FileReader(file1);
+			try {
+				filepath=abspath+"apache-tomcat-10.0.5/webapps/Calculate/conf/config.txt";
+				file1 = new File(filepath);
+				fr1 = new FileReader(file1);
+			} catch (Exception ex) {
+				filepath=abspath+"/webapps/Calculate/conf/config.txt";
+				file1 = new File(filepath);
+				fr1 = new FileReader(file1);
+			}
     	} catch(Exception ex) {
     		file1 = new File("src/main/webapp/conf/config.txt");
     		fr1 = new FileReader(file1);
@@ -134,9 +140,15 @@ public class Coef implements parametrs {
 			for(int i=0;i<(lengthpath-1);i++) {
 				abspath=abspath+parsfilepath[i]+"/";
 			}
-			filepath=abspath+"apache-tomcat-10.0.5/webapps/Calculate/conf/city.txt";
-			file2 = new File(filepath);
-			fr2 = new FileReader(file2);
+			try {
+				filepath=abspath+"apache-tomcat-10.0.5/webapps/Calculate/conf/city.txt";
+				file2 = new File(filepath);
+				fr2 = new FileReader(file2);
+			} catch (Exception ex) {
+				filepath=abspath+"/webapps/Calculate/conf/city.txt";
+				file2 = new File(filepath);
+				fr2 = new FileReader(file2);
+			}
     	} catch(Exception ex) {
     		file2 = new File("src/main/webapp/conf/city.txt");
 			fr2 = new FileReader(file2);

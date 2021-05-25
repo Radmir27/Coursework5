@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/style.css">
 <body bgcolor="#DAD8FE" leftmargin="40">
     <div class="title"><h1>АВТОРИЗАЦИЯ</h1></div> 
     <div id="auth" class="form">
@@ -16,12 +16,12 @@
             <input type="password" name="pass" id="pass" value="${pass}">
         </div>
         <div class="item">
+            <label for="login">Неправильно введен логин или пароль</label>
+        </div>
+        <div class="item">
             <input type="submit" name="sign" value="Вход">
         </div>
     </form>
-        <div class="item">
-            <label for="login">Неправильно введен логин или пароль</label>
-        </div>
 
 </div>
 </body>
