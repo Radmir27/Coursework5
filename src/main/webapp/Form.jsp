@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Калькулятор расчета ОСАГО</title>
-<link rel="stylesheet" href="{pageContext.request.contextPath}/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/style.css">
 </head>
 	<body bgcolor="#DAD8FE" leftmargin="40">
                 	<header>

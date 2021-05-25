@@ -78,6 +78,7 @@ public class City extends HttpServlet {
         public void setConfCity(HttpServletRequest request) throws IOException {
         	
         	File file;
+        	FileWriter fw;
         	
         	boolean[] bl = new boolean[5];
         	
@@ -87,7 +88,7 @@ public class City extends HttpServlet {
         	
         	for (int i = 0; i < 5; i++) {
         		bl[i] = true; 
-        		if (city[i] == (float)0) {
+        		if (city[i] >= (float) 0.55 && city[i] <= (float) 1.99) {
         			city[i] = coef.cityCoef[i];
         			bl[i] = false; 
         		}
@@ -101,15 +102,15 @@ public class City extends HttpServlet {
     			for(int i=0;i<(lengthpath-1);i++) { 
     				abspath=abspath+parsfilepath[i]+"/";
     			}
-    			//try {
-    			//	filepath=abspath+"apache-tomcat-10.0.5/webapps/Calculate/conf/city.txt";
-        		//	file = new File(filepath);
-        		//	FileWriter fw = new FileWriter(file);
-    			//} catch (Exception ex) {
+    			try {
+    				filepath=abspath+"apache-tomcat-10.0.5/webapps/Calculate/conf/city.txt";
+        			file = new File(filepath);
+        			fw = new FileWriter(file);
+    			} catch (Exception ex) {
     				filepath=abspath+"webapps/Calculate/conf/city.txt";
         			file = new File(filepath);
-        			FileWriter fw = new FileWriter(file);
-    			//}
+        			fw = new FileWriter(file);
+    			}
         		PrintWriter pw = new PrintWriter(fw);
         		for (int i = 0; i < 5; i++) {
         			pw.print(city[i] + " ");
