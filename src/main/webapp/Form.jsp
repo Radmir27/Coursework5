@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Калькулятор расчета ОСАГО</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/style.css">
+<link rel="stylesheet" href="{pageContext.request.contextPath}/style.css">
 </head>
 	<body bgcolor="#DAD8FE" leftmargin="40">
                 	<header>
@@ -121,7 +121,7 @@
 				<input readonly type="text" name="price" id="price" value="${result}">
 			</div>
 			<div class="item">
-            	<input onclick="ref4()" type="submit" name="sign" value="Рассчитать">
+            	<input onclick="ref4()" type="submit" name="sign" value="Расчитать">
             </div>
             </form>
             </div>
@@ -191,6 +191,8 @@
       doc.setFont('Courier');
       var e;
       //doc.text(0, 10, 'hello');
+      
+      doc.text(40, 20, 'Result of the MTPL calculation');
       
       e = document.getElementById("category");
 	  var category = e.options[e.selectedIndex].value;
